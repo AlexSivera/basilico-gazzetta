@@ -1,0 +1,5 @@
+# Material de investigación (fotos originales, capturas): no se publica
+.playwright-mcp/
+# Documentación interna de agencia: se queda en local
+docs/
+node_modules/

@@ -1,0 +1,113 @@
+{
+  "venue": "spritz",
+  "source": "Carta Basilico&Spritz publicada en la web actual, octubre 2026. Normalizadas solo erratas evidentes.",
+  "sections": [
+    {
+      "id": "s-picar",
+      "es": "Algo para picar",
+      "en": "Something to nibble",
+      "img": "croquetas-bulldog",
+      "img_alt_es": "Croquetas servidas por una figura de bulldog con gafas de sol",
+      "img_alt_en": "Croquettes served by a bulldog figure wearing sunglasses",
+      "items": [
+        { "name": "Crujiente de pollo", "price": "10 €", "es": "Rebozado en panko con salsa barbacoa y patatas de boniato", "en": "Panko-crumbed chicken with barbecue sauce and sweet potato fries" },
+        { "name": "Gambas al ajillo", "price": "15 €", "es": "Gambas, aceite de oliva, ajos, tomate cherry y pimientos del padrón", "en": "Prawns, olive oil, garlic, cherry tomato and padrón peppers" },
+        { "name": "Albóndigas", "price": "13 €", "es": "Salsa de mostaza, nata vegetal, setas, pimienta y mozzarella", "en": "Mustard sauce, plant-based cream, mushrooms, pepper and mozzarella" },
+        { "name": "Bravas de berenjena", "price": "15 €", "es": "Berenjena, salsa de soja y teriyaki, ajos, cebolla y pimientos", "en": "Aubergine with soy and teriyaki, garlic, onion and peppers" },
+        { "name": "Octopus", "price": "20 €", "es": "Pata de pulpo con crema de patatas, huevo a baja temperatura, pimientos del padrón y crujiente de boniato", "en": "Octopus leg with potato cream, slow-cooked egg, padrón peppers and sweet potato crisps" },
+        { "name": "Vitello tonnato", "price": "13,50 €", "es": "Redondo de ternera, salsa Basilico, alcaparras, rúcula y pimienta", "en": "Thin-sliced veal with Basilico tuna sauce, capers, rocket and pepper" },
+        { "name": "Alcachofas confitadas", "price": "13,50 €", "es": "Corazón de alcachofas, salsa Basilico, jamón serrano, tomate seco y burrata", "en": "Confit artichoke hearts, Basilico sauce, serrano ham, sun-dried tomato and burrata" },
+        { "name": "Que morro", "price": "10 €", "es": "Morro, crema de patatas, huevo poché y pimientos del padrón", "en": "Pork snout, potato cream, poached egg and padrón peppers" },
+        { "name": "Calamar a la andaluza", "price": "12 €", "es": "Calamar rebozado en harina de garbanzos, salsa tártara, pimientos del padrón y rúcula", "en": "Squid fried in chickpea flour, tartare sauce, padrón peppers and rocket" },
+        { "name": "Croquetas caseras", "price": "1,90 €", "es": "Precio por unidad. Espinacas, bacalao, boletus y trufa, gamba roja o jamón ibérico", "en": "Price per piece. Spinach, salt cod, porcini and truffle, red prawn or Iberian ham" }
+      ]
+    },
+    {
+      "id": "s-panes",
+      "es": "Panes caseros",
+      "en": "Homemade breads",
+      "items": [
+        { "name": "Pan de pueblo", "price": "4,50 €", "es": "Con tomate, alioli y aceitunas", "en": "Country bread with tomato, aioli and olives" },
+        { "name": "Focaccia", "price": "8,50 €", "es": "Jamón serrano, rúcula, burrata y tomate seco", "en": "Serrano ham, rocket, burrata and sun-dried tomato" }
+      ]
+    },
+    {
+      "id": "s-ensaladas",
+      "es": "Ensaladas",
+      "en": "Salads",
+      "items": [
+        { "name": "Basilico", "price": "11 €", "es": "Queso semicurado, tomate seco, rúcula, almendras y jamón serrano", "en": "Semi-cured cheese, sun-dried tomato, rocket, almonds and serrano ham" },
+        { "name": "Benimeli", "price": "14 €", "es": "Queso burrata, tostas de pan con tomate, cebolla morada, pesto, vinagre de Módena y rúcula", "en": "Burrata, tomato toasts, red onion, pesto, Modena vinegar and rocket" }
+      ]
+    },
+    {
+      "id": "s-patatas",
+      "es": "Nuestras patatas",
+      "en": "Our potatoes",
+      "items": [
+        { "name": "Patatas llama a los bomberos", "price": "14,50 €", "es": "Con salsa casera picante, pimientos del padrón y alioli", "en": "Homemade hot sauce, padrón peppers and aioli" },
+        { "name": "Huevos rotos", "price": "15 €", "es": "Jamón serrano, huevos fritos, patatas caseras y pimientos del padrón", "en": "Homemade chips, fried eggs, serrano ham and padrón peppers" },
+        { "name": "Patatas a los 4 quesos", "price": "15 €", "es": "Nata vegetal, mozzarella, queso azul y scamorza ahumado", "en": "Plant-based cream, mozzarella, blue cheese and smoked scamorza" }
+      ]
+    },
+    {
+      "id": "s-burgers",
+      "es": "Burgers",
+      "en": "Burgers",
+      "items": [
+        { "name": "Basilico", "price": "17 €", "es": "Carne de wagyu, cebolla, tomate, rúcula, cheddar, huevo, salsa de queso, serrano, mayonesa de trufa y patatas fritas", "en": "Wagyu beef, onion, tomato, rocket, cheddar, egg, cheese sauce, serrano ham, truffle mayo and chips" },
+        { "name": "Benimeli", "price": "16 €", "es": "Pollo rebozado en panko, huevo, rúcula, tomate seco, queso ahumado, salsa gaucha picante, crujiente de bacón y patatas de boniato", "en": "Panko chicken, egg, rocket, sun-dried tomato, smoked cheese, spicy gaucho sauce, bacon crunch and sweet potato fries" }
+      ]
+    },
+    {
+      "id": "s-costillas",
+      "es": "Costillas",
+      "en": "Ribs",
+      "img": "costillas",
+      "img_alt_es": "Costilla de cerdo en salsa con patatas y pimientos del padrón",
+      "img_alt_en": "Pork ribs in sauce with chips and padrón peppers",
+      "items": [
+        { "name": "Costilla de cerdo", "price": "20 €", "es": "Costilla americana a baja temperatura, en salsa barbacoa al whisky, patatas fritas y pimientos del padrón", "en": "Slow-cooked American-style ribs in whisky barbecue sauce, chips and padrón peppers" }
+      ]
+    },
+    {
+      "id": "s-postres",
+      "es": "Postres",
+      "en": "Desserts",
+      "img": "helado-playa",
+      "img_alt_es": "Un mal día en la playa: helado con cucurucho del revés y arena de galleta",
+      "img_alt_en": "'A bad day at the beach': ice cream with an upside-down cone and biscuit sand",
+      "items": [
+        { "name": "Un mal día en la playa", "price": "6,50 €", "es": "Helado de fresa, chocolate, coco, vainilla, cucurucho, chocolate caliente, almendra caramelizada y tierra de galleta", "en": "Strawberry, chocolate, coconut and vanilla ice cream, cone, hot chocolate, caramelised almond and biscuit crumble" },
+        { "name": "Torrijas", "price": "6,50 €", "es": "Torrijas y helado de vainilla", "en": "Spanish-style French toast with vanilla ice cream" },
+        { "name": "Tarta de queso", "price": "6 €", "es": "Mini tarta de queso con helado de vainilla, mermelada de higos y crujiente de almendra", "en": "Mini cheesecake with vanilla ice cream, fig jam and almond crunch" },
+        { "name": "Tiramisú", "price": "7 €", "es": "De mascarpone y pistacho", "en": "Mascarpone and pistachio" }
+      ]
+    },
+    {
+      "id": "s-vinos",
+      "es": "Vinos",
+      "en": "Wines",
+      "note_es": "Botella",
+      "note_en": "Bottle",
+      "subsections": [
+        { "es": "Blancos", "en": "White", "items": [
+          { "name": "Finca Feroz", "price": "15 €", "es": "D.O. Rueda · Verdejo", "en": "D.O. Rueda · Verdejo" },
+          { "name": "Sommos", "price": "15 €", "es": "D.O. Somontano · Chardonnay", "en": "D.O. Somontano · Chardonnay" },
+          { "name": "Tharsys City", "price": "15 €", "es": "D.O. Requena · Macabeo", "en": "D.O. Requena · Macabeo" }
+        ]},
+        { "es": "Tintos", "en": "Red", "items": [
+          { "name": "Tharsys City", "price": "15 €", "es": "D.O. Requena · Bobal", "en": "D.O. Requena · Bobal" },
+          { "name": "Marqués de Atrio", "price": "15 €", "es": "D.O. Rioja · Crianza", "en": "D.O. Rioja · Crianza" },
+          { "name": "Olía", "price": "15 €", "es": "D.O. Ribera del Duero · Tempranillo", "en": "D.O. Ribera del Duero · Tempranillo" }
+        ]},
+        { "es": "Rosado", "en": "Rosé", "items": [
+          { "name": "Marqués de Atrio", "price": "15 €", "es": "D.O. Rioja · Garnacha", "en": "D.O. Rioja · Garnacha" }
+        ]},
+        { "es": "Cava", "en": "Cava", "items": [
+          { "name": "Domino de Requena", "price": "15 €", "es": "D.O. Requena · Brut", "en": "D.O. Requena · Brut" }
+        ]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "_howto": "Actualizar cada semana con el cartel publicado en Instagram. validFrom/validTo en formato AAAA-MM-DD (hora de Madrid). El build vuelca estos datos en index.html; el JS decide si están vigentes.",
+  "tavernetta": [
+    {
+      "id": "semana",
+      "es": "Menú de la semana",
+      "en": "Weekday set menu",
+      "when_es": "Miércoles a viernes · mediodía",
+      "when_en": "Wednesday to Friday · lunch",
+      "price": "16 €",
+      "validFrom": "2026-09-30",
+      "validTo": "2026-10-02",
+      "source": "Instagram @basilico_tavernetta, 29/09/2026",
+      "courses": [
+        { "es": "1 primero a elegir", "en": "1 starter of your choice", "items": [
+          { "es": "Vitello tonnato con alcaparras, salsa tártara, tomate cherry y rúcula", "en": "Vitello tonnato with capers, tartare sauce, cherry tomato and rocket" },
+          { "es": "Albóndigas en salsa con sus patatitas", "en": "Meatballs in sauce with potatoes" },
+          { "es": "Pan italiano", "en": "Italian bread" }
+        ]},
+        { "es": "1 segundo a elegir", "en": "1 main of your choice", "items": [
+          { "es": "Cazuela de pescado", "en": "Fish stew" },
+          { "es": "Carrillada de cerdo en salsa de pimienta", "en": "Pork cheek in pepper sauce" },
+          { "es": "Raviolis de carne con salsa boloñesa", "en": "Meat ravioli with bolognese sauce" },
+          { "es": "Pizza napolitana 4 quesos", "en": "Four-cheese Neapolitan pizza" }
+        ]},
+        { "es": "Postre", "en": "Dessert", "items": [
+          { "es": "Tarta de queso casera", "en": "Homemade cheesecake" }
+        ]}
+      ],
+      "includes_es": "1 bebida (agua pequeña, refresco, tercio de cerveza o copa de vino) y café",
+      "includes_en": "1 drink (small water, soft drink, beer or glass of wine) and coffee"
+    },
+    {
+      "id": "finde",
+      "es": "Menú de fin de semana",
+      "en": "Weekend set menu",
+      "when_es": "Sábados y domingos · mediodía",
+      "when_en": "Saturday and Sunday · lunch",
+      "price": "20 €",
+      "validFrom": "2026-10-03",
+      "validTo": "2026-10-04",
+      "source": "Instagram @basilico_tavernetta, 01/10/2026",
+      "courses": [
+        { "es": "Primeros", "en": "Starters", "items": [
+          { "es": "Pan de pueblo", "en": "Country bread" },
+          { "es": "Vitello tonnato", "en": "Vitello tonnato" }
+        ]},
+        { "es": "Segundo a elegir", "en": "Main of your choice", "items": [
+          { "es": "Chuletitas de cordero con patatas a lo pobre", "en": "Lamb chops with 'a lo pobre' potatoes" },
+          { "es": "Bacalao en salsa de tomate y frutos del mar", "en": "Cod in tomato and seafood sauce" },
+          { "es": "Pizza napolitana ranchera", "en": "Ranchera Neapolitan pizza" },
+          { "es": "Raviolis de setas con salsa de pesto", "en": "Mushroom ravioli with pesto" },
+          { "es": "Risotto del corral", "en": "Chicken risotto" }
+        ]},
+        { "es": "Postre", "en": "Dessert", "items": [
+          { "es": "Mousse de chocolate", "en": "Chocolate mousse" }
+        ]}
+      ],
+      "includes_es": "1 bebida (refresco, agua pequeña, copa de vino o tercio de cerveza)",
+      "includes_en": "1 drink (soft drink, small water, glass of wine or beer)"
+    }
+  ]
+}
