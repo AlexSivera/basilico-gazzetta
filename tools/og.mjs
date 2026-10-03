@@ -3,7 +3,7 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const sharp = require(process.env.SHARP_PATH || 'sharp');
 const jobs = [
-  ['assets/img/mesa-italovalenciana-1600.webp', 'assets/img/og-basilico.jpg'],
+  ['assets/img/portada-mesa-2000.webp', 'assets/img/og-basilico.jpg'],
   ['assets/img/spritz-terraza-1600.webp', 'assets/img/og-spritz.jpg'],
 ];
 for (const [src, out] of jobs) {

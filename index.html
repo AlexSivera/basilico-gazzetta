@@ -19,7 +19,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..700&family=Sacramento&display=swap">
-  <link rel="preload" as="image" href="assets/img/mesa-italovalenciana-800.webp" imagesrcset="assets/img/mesa-italovalenciana-800.webp 800w, assets/img/mesa-italovalenciana-1600.webp 1600w" imagesizes="(min-width: 1000px) 50vw, 100vw">
+  <link rel="preload" as="image" href="assets/img/portada-mesa-1200.webp" imagesrcset="assets/img/portada-mesa-1200.webp 1200w, assets/img/portada-mesa-2000.webp 2000w, assets/img/portada-mesa-2800.webp 2800w" imagesizes="(min-width: 1320px) 1240px, 94vw" media="(min-width: 700px)">
+  <link rel="preload" as="image" href="assets/img/portada-mesa-m-640.webp" imagesrcset="assets/img/portada-mesa-m-640.webp 640w, assets/img/portada-mesa-m-1000.webp 1000w" imagesizes="100vw" media="(max-width: 699px)">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script type="application/ld+json">
   {
@@ -65,12 +66,11 @@
     <div class="wrap topbar__in">
       <a class="brand" href="#portada" aria-label="Basilico, inicio" data-en-aria-label="Basilico, home">
         <span class="brand__script">Basilico</span>
-        <span class="brand__sub" data-en="Italo-Valencian tavernetta">Tavernetta italovalenciana</span>
       </a>
       <nav class="topnav" aria-label="Secciones" data-en-aria-label="Sections">
         <ul role="list">
-          <li><a href="#mediodia" data-en="Lunch">Mediodía</a></li>
           <li><a href="#carta" data-en="Menu">Carta</a></li>
+          <li><a href="#mediodia" data-en="Lunch menu">Mediodía</a></li>
           <li><a href="#sucesos" data-en="Oddities">Sucesos</a></li>
           <li><a href="#casa" data-en="The house">La casa</a></li>
           <li><a href="#domicilio" data-en="Delivery">A domicilio</a></li>
@@ -81,24 +81,21 @@
       <div class="topbar__actions">
         <button class="lang" type="button" data-lang-toggle aria-label="Read in English" data-en-aria-label="Leer en español"><span data-en="ES">EN</span></button>
         <button class="btn btn--tomato btn--sm" type="button" data-open-reserva data-en="Book">Reservar</button>
-        <button class="burger" type="button" aria-expanded="false" aria-controls="sumario-movil" data-burger>
-          <span class="sr" data-en="Open index">Abrir sumario</span><span class="burger__bars" aria-hidden="true"></span>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="menu-movil" data-burger>
+          <span class="sr" data-en="Open menu">Abrir menú</span><span class="burger__bars" aria-hidden="true"></span>
         </button>
       </div>
     </div>
-    <div class="mobnav" id="sumario-movil" data-mobnav hidden>
-      <p class="mobnav__title" data-en="In this edition">En esta edición</p>
-      <ol class="sumario">
-        <li><a href="#portada"><span data-en="Front page">Portada</span><i></i><b>1</b></a></li>
-        <li><a href="#mediodia"><span data-en="Lunch menus">Menús de mediodía</span><i></i><b>2</b></a></li>
-        <li><a href="#carta"><span data-en="The full menu">La carta</span><i></i><b>3</b></a></li>
-        <li><a href="#sucesos"><span data-en="Oddities">Sucesos</span><i></i><b>4</b></a></li>
-        <li><a href="#casa"><span data-en="The house">La casa</span><i></i><b>5</b></a></li>
-        <li><a href="#lectores"><span data-en="Letters">Cartas de los lectores</span><i></i><b>6</b></a></li>
-        <li><a href="#domicilio"><span data-en="Classifieds · delivery">Clasificados · domicilio</span><i></i><b>7</b></a></li>
-        <li><a href="#visitanos"><span data-en="Visit us">Visítanos</span><i></i><b>8</b></a></li>
-        <li><a href="spritz.html"><span data-en="Supplement: Basilico&amp;Spritz">Suplemento: Basilico&amp;Spritz</span><i></i><b>9</b></a></li>
-      </ol>
+    <div class="mobnav" id="menu-movil" data-mobnav hidden>
+      <ul class="mobnav__list" role="list">
+        <li><a href="#carta" data-en="The menu">La carta</a></li>
+        <li><a href="#mediodia" data-en="Lunch set menus">Menús de mediodía</a></li>
+        <li><a href="#sucesos" data-en="Oddities">Sucesos</a></li>
+        <li><a href="#casa" data-en="The house">La casa</a></li>
+        <li><a href="#domicilio" data-en="Home delivery">A domicilio</a></li>
+        <li><a href="#visitanos" data-en="Hours &amp; directions">Horario y cómo llegar</a></li>
+        <li><a href="spritz.html">Basilico&amp;Spritz</a></li>
+      </ul>
       <div class="mobnav__cta">
         <a class="btn btn--ink" href="tel:+34652823117">652 823 117</a>
         <a class="btn btn--ghost" href="https://www.instagram.com/basilico_tavernetta/" rel="noopener" target="_blank">@basilico_tavernetta</a>
@@ -108,217 +105,141 @@
 
   <main id="main">
 
-    <!-- ============ 1 · PORTADA ============ -->
+    <!-- ============ PORTADA ============ -->
     <section class="portada" id="portada" aria-labelledby="titular">
       <div class="wrap">
         <div class="masthead" data-masthead>
-          <div class="masthead__ears">
-            <p class="ear ear--l"><span>Beniarbeig · Marina Alta</span><span>Avinguda de la Pau, 15</span></p>
-            <p class="ear ear--r"><span><span data-en="Edition no.">Edición nº</span> <b data-weekno>40</b></span><span data-en="Lunch menu from 16 €">Menú de mediodía desde 16 €</span></p>
-          </div>
+          <p class="masthead__line">
+            <span class="masthead__paper" data-en="La Gazzetta Italovalenciana">La Gazzetta Italovalenciana</span>
+            <span class="masthead__date" data-dateline>Beniarbeig</span>
+            <span class="masthead__where">Avinguda de la Pau, 15</span>
+          </p>
           <h1 class="masthead__title">
             <span class="masthead__logo">Basilico</span>
-            <span class="masthead__sub" data-en="La Gazzetta Italovalenciana · Beniarbeig tavernetta">La Gazzetta Italovalenciana · Tavernetta de Beniarbeig</span>
+            <span class="masthead__sub" data-en="Italo-Valencian tavernetta · Beniarbeig">Tavernetta italovalenciana · Beniarbeig</span>
           </h1>
-          <p class="masthead__bar">
-            <span data-en="Fresh produce · Honest cooking · Family service">Producto fresco · Cocina sincera · Servicio familiar</span>
-            <span class="masthead__date" data-dateline>Beniarbeig</span>
-            <span class="masthead__status" data-status-short></span>
-          </p>
         </div>
-      </div>
 
-      <div class="ticker" aria-label="Última hora" data-en-aria-label="Breaking news">
-        <div class="ticker__track" data-ticker>
-          <p class="ticker__item"><b data-en="Breaking">Última hora</b> <span data-status-ticker>Abrimos de miércoles a domingo</span></p>
-          <p class="ticker__item" data-en="Weekend lunch menu: 20 € with a drink">Menú de fin de semana a mediodía: 20 € con bebida</p>
-          <p class="ticker__item" data-en="Dogs welcome on the terrace">Perros bienvenidos en la terraza</p>
-          <p class="ticker__item" data-en="Home delivery Wednesday to Sunday, 19:00–23:30">Reparto a domicilio de miércoles a domingo, 19:00–23:30</p>
-          <p class="ticker__item" data-en="Three doughs: Roman, Neapolitan and pinsa">Tres masas: romana, napolitana y pinsa</p>
-          <p class="ticker__item" data-en="Gluten-free pizza base available">Masa de pizza sin gluten disponible</p>
-        </div>
-      </div>
-
-      <div class="wrap front">
-        <article class="front__lead">
-          <p class="kicker" data-en="Food · Beniarbeig">Gastronomía · Beniarbeig</p>
+        <div class="front">
           <h2 class="headline" id="titular" data-en="Impossible to leave hungry">Imposible irse con&nbsp;hambre</h2>
-          <figure class="lead-fig">
-            <img src="assets/img/mesa-italovalenciana-800.webp" srcset="assets/img/mesa-italovalenciana-800.webp 800w, assets/img/mesa-italovalenciana-1600.webp 1600w" sizes="(min-width: 1000px) 50vw, 100vw" alt="Mesa de Basilico: pizza napolitana con pimientos del padrón, pinsa y huevos rotos con jamón en sartén" data-en-alt="A Basilico table: Neapolitan pizza with padrón peppers, a pinsa and fried eggs with ham in the pan" width="1600" height="720" fetchpriority="high" decoding="async">
-            <figcaption><span data-en="Neapolitan, pinsa and broken eggs in the pan: one Italo-Valencian table.">Napolitana, pinsa y huevos rotos en sartén: una mesa italovalenciana.</span> <em data-en="Photo: a guest on Google Maps">Foto: cliente en Google Maps</em></figcaption>
-          </figure>
-          <p class="deck" data-en="Neapolitan pizza with padrón peppers, pinsas with chimichurri, homemade pasta and portions made for sharing. Basilico cooks Italian with a Marina Alta accent, and its guests sum it up better than anyone.">Napolitana con pimientos del padrón, pinsas con chimichurri, pasta casera y raciones que piden compartir. Basilico cocina italiano con acento de la Marina Alta, y sus clientes lo resumen mejor que nadie.</p>
-          <p class="byline"><span data-en="By the Basilico newsroom">Por la redacción de Basilico</span> · <a href="#lectores" data-en="4.6 ★ from 291 reviews on Google">4,6 ★ en 291 reseñas de Google</a></p>
-        </article>
-
-        <aside class="front__hoy" aria-labelledby="hoy-t">
-          <div class="hoy">
-            <h3 class="hoy__title" id="hoy-t" data-en="Today at Basilico">Hoy en Basilico</h3>
-            <p class="hoy__status" data-status-long><span data-en="Open Wednesday to Sunday">Abrimos de miércoles a domingo</span></p>
-            <p class="hoy__hours" data-today-hours></p>
-            <div class="hoy__cta">
-              <button class="btn btn--tomato btn--block" type="button" data-open-reserva data-en="Book a table">Reservar mesa</button>
-              <a class="btn btn--ink btn--block btn--call" href="tel:+34652823117"><span data-en="Call">Llamar</span> <span class="nowrap">652 823 117</span></a>
+          <div class="front__aside">
+            <p class="deck" data-en="Pizza on three different doughs, homemade pasta and generous plates. Italian cooking with a Marina Alta accent.">Pizza de tres masas, pasta casera y raciones generosas. Cocina italiana con acento de la Marina Alta.</p>
+            <div class="front__cta">
+              <button class="btn btn--tomato" type="button" data-open-reserva data-en="Book a table">Reservar mesa</button>
+              <a class="btn btn--ghost" href="#carta" data-en="See the menu">Ver la carta</a>
             </div>
-            <p class="hoy__note" data-en="Mondays and Tuesdays closed. Weekends fill up: booking recommended.">Lunes y martes, cerrado. El fin de semana se llena: mejor reservar.</p>
+            <p class="front__status" data-status-long></p>
           </div>
-          <nav class="sumario-box" aria-labelledby="sum-t">
-            <h3 class="sumario-box__title" id="sum-t" data-en="In this edition">En esta edición</h3>
-            <ol class="sumario">
-              <li><a href="#mediodia"><span data-en="Lunch menus">Menús de mediodía</span><i></i><b>2</b></a></li>
-              <li><a href="#carta"><span data-en="The full menu">La carta</span><i></i><b>3</b></a></li>
-              <li><a href="#sucesos"><span data-en="Oddities">Sucesos</span><i></i><b>4</b></a></li>
-              <li><a href="#casa"><span data-en="The house">La casa</span><i></i><b>5</b></a></li>
-              <li><a href="#lectores"><span data-en="Letters">Cartas de los lectores</span><i></i><b>6</b></a></li>
-              <li><a href="#domicilio"><span data-en="Delivery">A domicilio</span><i></i><b>7</b></a></li>
-              <li><a href="#visitanos"><span data-en="Visit us">Visítanos</span><i></i><b>8</b></a></li>
-              <li><a href="spritz.html"><span data-en="Basilico&amp;Spritz">Basilico&amp;Spritz</span><i></i><b>9</b></a></li>
-            </ol>
-          </nav>
-        </aside>
 
-        <aside class="front__side" aria-label="Destacados" data-en-aria-label="Highlights">
-          <a class="teaser teaser--menu" href="#mediodia" data-front-menu>
-            <span class="teaser__kicker" data-en="Lunch · p. 2">Mediodía · pág. 2</span>
-            <span class="teaser__title" data-front-menu-title data-en="This week's set menus">Los menús de esta semana</span>
-            <span class="teaser__price" data-front-menu-price>16–20 €</span>
-            <span class="teaser__text" data-front-menu-text data-en="Starter, main, dessert and a drink. A new edition every week.">Primero, segundo, postre y bebida. Edición nueva cada semana.</span>
-          </a>
-          <a class="teaser teaser--suceso" href="#sucesos">
-            <img src="assets/img/croquetas-bulldog-800.webp" alt="Figura de bulldog negro con gafas de sol sirviendo croquetas" data-en-alt="Black bulldog figure in sunglasses serving croquettes" width="800" height="450" loading="lazy" decoding="async">
-            <span class="teaser__kicker" data-en="Oddities · p. 4">Sucesos · pág. 4</span>
-            <span class="teaser__title" data-en="Bulldog in sunglasses caught serving croquettes">Un bulldog con gafas de sol, sorprendido sirviendo croquetas</span>
-          </a>
-        </aside>
-
-        <ul class="breves" role="list">
-          <li><b data-en="Three doughs">Tres masas</b> <span data-en="Roman, Neapolitan and pinsa.">Romana, napolitana y pinsa.</span></li>
-          <li><b data-en="XL portions">Raciones XL</b> <span data-en="Many dishes are for sharing. Ask before over-ordering.">Muchos platos son para compartir. Pregunta antes de pedir de más.</span></li>
-          <li><b data-en="Dogs welcome">Perros bienvenidos</b> <span data-en="On the terrace.">En la terraza.</span></li>
-          <li><b data-en="Gluten-free">Sin gluten</b> <span data-en="Pizza base and cheesecake. Just ask.">Masa de pizza y tarta de queso. Pregúntanos.</span></li>
-        </ul>
+          <figure class="cover">
+            <picture>
+              <source media="(max-width: 699px)" srcset="assets/img/portada-mesa-m-640.webp 640w, assets/img/portada-mesa-m-1000.webp 1000w" sizes="100vw">
+              <img src="assets/img/portada-mesa-1200.webp" srcset="assets/img/portada-mesa-1200.webp 1200w, assets/img/portada-mesa-2000.webp 2000w, assets/img/portada-mesa-2800.webp 2800w" sizes="(min-width: 1320px) 1240px, 94vw" alt="Mesa de Basilico: pizza napolitana con pimientos del padrón, pinsa y huevos rotos con jamón en sartén" data-en-alt="A Basilico table: Neapolitan pizza with padrón peppers, a pinsa and fried eggs with ham in the pan" width="2800" height="1120" fetchpriority="high" decoding="async">
+            </picture>
+            <figcaption><span class="only-d" data-en="Neapolitan with padrón peppers, pinsa and broken eggs in the pan.">Napolitana con pimientos del padrón, pinsa y huevos rotos en sartén.</span><span class="only-m" data-en="Neapolitan with padrón peppers and basil.">Napolitana con pimientos del padrón y albahaca.</span> <em data-en="Photo: a guest, on Google Maps">Foto: un cliente, en Google Maps</em></figcaption>
+            <a class="sello" href="#mediodia" data-sello>
+              <span class="sello__k" data-sello-k data-en="Lunch menu">Menú de mediodía</span>
+              <span class="sello__p" data-sello-p>16 €</span>
+              <span class="sello__s" data-sello-s data-en="with a drink">con bebida</span>
+            </a>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <!-- ============ 2 · MEDIODÍA ============ -->
-    <section class="sec" id="mediodia" aria-labelledby="mediodia-t">
+    <!-- ============ TRES MASAS ============ -->
+    <section class="masas" id="masas" aria-labelledby="masas-t">
       <div class="wrap">
-        <header class="sec__head">
-          <p class="sec__page"><span data-en="Page">Pág.</span> 2</p>
-          <p class="sec__name" data-en="Lunch">Mediodía</p>
+        <header class="masas__head">
+          <p class="kicker kicker--light" data-en="The speciality">La especialidad</p>
+          <h2 class="masas__title" id="masas-t" data-en="Three doughs, three different pizzas">Tres masas, tres pizzas distintas</h2>
+          <p class="masas__deck" data-en="One review sums it up: three kinds of dough, each one better than the last. At Basilico you don't just choose toppings, you choose the dough.">Una reseña lo resume: tres tipos de masa, cada cual mejor. En Basilico no solo eliges ingredientes, eliges masa.</p>
         </header>
-        <div class="sec__intro">
-          <h2 class="sec__title" id="mediodia-t" data-en="This week's set menus, hot off the press">Los menús de la semana, recién impresos</h2>
-          <p class="sec__deck" data-en="Every week Basilico publishes a new edition of its lunch menus. Starter, main, dessert and a drink — and portions in keeping with the house.">Cada semana Basilico publica una edición nueva de sus menús de mediodía. Primero, segundo, postre y bebida, con las raciones de la casa.</p>
+        <div class="masas__grid">
+          <a class="masa" href="#c-pizzas" data-goto-cat="pizzas">
+            <figure class="masa__fig"><img src="assets/img/masa-romana-600.webp" srcset="assets/img/masa-romana-600.webp 600w, assets/img/masa-romana-1000.webp 1000w" sizes="(min-width: 1000px) 31vw, 78vw" alt="Pizza romana de masa fina con rúcula, tomate y cebolla morada" data-en-alt="Thin Roman-style pizza with rocket, tomato and red onion" width="1000" height="1333" loading="lazy" decoding="async"></figure>
+            <div class="masa__txt">
+              <h3 class="masa__name" data-en="Roman">Romana</h3>
+              <p class="masa__what" data-en="Thin and crisp.">Fina y crujiente.</p>
+              <p class="masa__info" data-en="25 recipes, from the Margherita to the beef kebab. Reviewers' picks: the Horta and the Calzone.">25 recetas, de la Margherita a la kebab de ternera. En las reseñas: la Horta y el Calzone.</p>
+              <p class="masa__from"><span data-en="from">desde</span> 11,50 €</p>
+              <span class="masa__go" data-en="See the Roman pizzas →">Ver las romanas →</span>
+            </div>
+          </a>
+          <a class="masa" href="#c-pizzasnapo" data-goto-cat="pizzasnapo">
+            <figure class="masa__fig"><img src="assets/img/masa-napolitana-600.webp" srcset="assets/img/masa-napolitana-600.webp 600w, assets/img/masa-napolitana-1000.webp 1000w" sizes="(min-width: 1000px) 31vw, 78vw" alt="Pizza napolitana de borde alto y tostado con queso gratinado y tomates cherry" data-en-alt="Neapolitan pizza with a tall charred crust, melted cheese and cherry tomatoes" width="1000" height="982" loading="lazy" decoding="async"></figure>
+            <div class="masa__txt">
+              <h3 class="masa__name" data-en="Neapolitan">Napolitana</h3>
+              <p class="masa__what" data-en="Tall, charred crust.">Borde alto y tostado.</p>
+              <p class="masa__info" data-en="Four house recipes: Carciofi, Guanciale, Bianca and Campera. About the guanciale one: «The best pizza I've ever eaten…»">Cuatro recetas de la casa: Carciofi, Guanciale, Bianca y Campera. De la de guanciale: «La mejor pizza que he comido en mi vida…»</p>
+              <p class="masa__from"><span data-en="from">desde</span> 17 €</p>
+              <span class="masa__go" data-en="See the Neapolitans →">Ver las napolitanas →</span>
+            </div>
+          </a>
+          <a class="masa" href="#c-pinsas" data-goto-cat="pinsas">
+            <figure class="masa__fig"><img src="assets/img/masa-pinsa-600.webp" srcset="assets/img/masa-pinsa-600.webp 600w, assets/img/masa-pinsa-1000.webp 1000w" sizes="(min-width: 1000px) 31vw, 78vw" alt="Pinsa de chuletón con pimientos del padrón sobre mantel de cuadros" data-en-alt="Rib-eye pinsa with padrón peppers on a checked tablecloth" width="1000" height="1200" loading="lazy" decoding="async"></figure>
+            <div class="masa__txt">
+              <h3 class="masa__name">Pinsa</h3>
+              <p class="masa__what" data-en="Long and airy.">Alargada y aireada.</p>
+              <p class="masa__info" data-en="Four Italo-Valencian pinsas. The one in the photo: Galician rib-eye, padrón peppers and chimichurri (19 €).">Cuatro pinsas italovalencianas. La de la foto: chuletón gallego, pimientos del padrón y chimichurri (19 €).</p>
+              <p class="masa__from"><span data-en="from">desde</span> 16,50 €</p>
+              <span class="masa__go" data-en="See the pinsas →">Ver las pinsas →</span>
+            </div>
+          </a>
         </div>
-        <div class="menus" data-menus>
-      <!-- build:menus -->
-      <article class="menu-card" data-menu="semana" data-from="2026-09-30" data-to="2026-10-02">
-        <header class="menu-card__head">
-          <p class="menu-card__state" data-state></p>
-          <h3 class="menu-card__title" data-en="Weekday set menu">Menú de la semana</h3>
-          <p class="menu-card__when" data-en="Wednesday to Friday · lunch">Miércoles a viernes · mediodía</p>
-          <p class="menu-card__price"><span>16 €</span><small data-en="per person">por persona</small></p>
-        </header>
-        
-        <div class="menu-card__course">
-          <h4 data-en="1 starter of your choice">1 primero a elegir</h4>
-          <ul role="list"><li data-en="Vitello tonnato with capers, tartare sauce, cherry tomato and rocket">Vitello tonnato con alcaparras, salsa tártara, tomate cherry y rúcula</li><li data-en="Meatballs in sauce with potatoes">Albóndigas en salsa con sus patatitas</li><li data-en="Italian bread">Pan italiano</li></ul>
-        </div>
-        <div class="menu-card__course">
-          <h4 data-en="1 main of your choice">1 segundo a elegir</h4>
-          <ul role="list"><li data-en="Fish stew">Cazuela de pescado</li><li data-en="Pork cheek in pepper sauce">Carrillada de cerdo en salsa de pimienta</li><li data-en="Meat ravioli with bolognese sauce">Raviolis de carne con salsa boloñesa</li><li data-en="Four-cheese Neapolitan pizza">Pizza napolitana 4 quesos</li></ul>
-        </div>
-        <div class="menu-card__course">
-          <h4 data-en="Dessert">Postre</h4>
-          <ul role="list"><li data-en="Homemade cheesecake">Tarta de queso casera</li></ul>
-        </div>
-        <p class="menu-card__incl"><strong data-en="Includes">Incluye</strong> <span data-en="1 drink (small water, soft drink, beer or glass of wine) and coffee">1 bebida (agua pequeña, refresco, tercio de cerveza o copa de vino) y café</span></p>
-        <p class="menu-card__src"><span data-edition></span> · <span data-en="Source: Instagram @basilico_tavernetta, 29/09/2026">Fuente: Instagram @basilico_tavernetta, 29/09/2026</span></p>
-      </article>
-
-      <article class="menu-card" data-menu="finde" data-from="2026-10-03" data-to="2026-10-04">
-        <header class="menu-card__head">
-          <p class="menu-card__state" data-state></p>
-          <h3 class="menu-card__title" data-en="Weekend set menu">Menú de fin de semana</h3>
-          <p class="menu-card__when" data-en="Saturday and Sunday · lunch">Sábados y domingos · mediodía</p>
-          <p class="menu-card__price"><span>20 €</span><small data-en="per person">por persona</small></p>
-        </header>
-        
-        <div class="menu-card__course">
-          <h4 data-en="Starters">Primeros</h4>
-          <ul role="list"><li data-en="Country bread">Pan de pueblo</li><li data-en="Vitello tonnato">Vitello tonnato</li></ul>
-        </div>
-        <div class="menu-card__course">
-          <h4 data-en="Main of your choice">Segundo a elegir</h4>
-          <ul role="list"><li data-en="Lamb chops with 'a lo pobre' potatoes">Chuletitas de cordero con patatas a lo pobre</li><li data-en="Cod in tomato and seafood sauce">Bacalao en salsa de tomate y frutos del mar</li><li data-en="Ranchera Neapolitan pizza">Pizza napolitana ranchera</li><li data-en="Mushroom ravioli with pesto">Raviolis de setas con salsa de pesto</li><li data-en="Chicken risotto">Risotto del corral</li></ul>
-        </div>
-        <div class="menu-card__course">
-          <h4 data-en="Dessert">Postre</h4>
-          <ul role="list"><li data-en="Chocolate mousse">Mousse de chocolate</li></ul>
-        </div>
-        <p class="menu-card__incl"><strong data-en="Includes">Incluye</strong> <span data-en="1 drink (soft drink, small water, glass of wine or beer)">1 bebida (refresco, agua pequeña, copa de vino o tercio de cerveza)</span></p>
-        <p class="menu-card__src"><span data-edition></span> · <span data-en="Source: Instagram @basilico_tavernetta, 01/10/2026">Fuente: Instagram @basilico_tavernetta, 01/10/2026</span></p>
-      </article>
-      <!-- /build:menus -->
-        </div>
-        <p class="menus__note"><span data-en="Menus change every week and are announced on Instagram first.">Los menús cambian cada semana y se anuncian primero en Instagram.</span> <a href="https://www.instagram.com/basilico_tavernetta/" target="_blank" rel="noopener">@basilico_tavernetta</a></p>
+        <p class="masas__note" data-en="Gluten-free pizza base available: just ask.">Hay masa de pizza sin gluten: pregúntanos.</p>
       </div>
     </section>
 
-    <!-- ============ 3 · CARTA ============ -->
+    <!-- ============ CARTA ============ -->
     <section class="sec sec--carta" id="carta" aria-labelledby="carta-t">
       <div class="wrap">
-        <header class="sec__head">
-          <p class="sec__page"><span data-en="Page">Pág.</span> 3</p>
-          <p class="sec__name" data-en="The menu">La carta</p>
-        </header>
+        <header class="sec__head"><p class="sec__name" data-en="The menu">La carta</p></header>
         <div class="sec__intro sec__intro--split">
           <div>
-            <h2 class="sec__title" id="carta-t" data-en="The full menu, between Italy and the Marina Alta">La carta completa, entre Italia y la Marina Alta</h2>
-            <p class="sec__deck" data-en="Nearly ninety dishes. Three pizza doughs — Roman (thin), Neapolitan (puffy crust) and pinsa (long and airy) — homemade pasta, risottos and portions made for sharing.">Casi noventa platos. Tres masas de pizza —romana, fina; napolitana, de borde alto; y pinsa, alargada y aireada—, pasta casera, risottos y raciones que piden compartir.</p>
+            <h2 class="sec__title" id="carta-t" data-en="Between Italy and the Marina Alta">Entre Italia y la Marina Alta</h2>
+            <p class="sec__deck" data-en="Nearly ninety dishes, many of them made for sharing. If in doubt, ask before ordering: portions are big.">Casi noventa platos, muchos para compartir. Si dudas, pregunta antes de pedir: las raciones son grandes.</p>
           </div>
           <div class="carta-tools">
             <label class="search" for="carta-q">
-              <span class="search__label" data-en="Search the menu">Buscar en la carta</span>
+              <span class="search__label" data-en="Search the whole menu">Buscar en toda la carta</span>
               <input id="carta-q" type="search" placeholder="burrata, trufa, pulpo…" data-en-placeholder="burrata, truffle, octopus…" autocomplete="off" data-carta-search>
             </label>
             <p class="legend">
-              <span class="tag tag--fav" data-en="Fan favourite">Favorito</span> <span data-en="mentioned again and again in Google reviews">lo que más se repite en las reseñas de Google</span><br>
-              <span class="tag tag--iv" data-en="Italo-Valencian">Italovalenciano</span> <span data-en="where Italy and the Marina Alta meet">donde Italia y la Marina Alta se mezclan</span>
+              <span class="tag tag--fav" data-en="Fan favourite">Favorito</span> <span data-en="most mentioned in reviews">lo más citado en las reseñas</span>
+              <span class="tag tag--iv" data-en="Italo-Valencian">Italovalenciano</span> <span data-en="Italy meets the Marina Alta">Italia y la Marina Alta</span>
             </p>
             <p class="carta-count" aria-live="polite" data-carta-count></p>
           </div>
         </div>
         <div class="carta" data-carta>
       <!-- build:carta-tavernetta -->
-      <nav class="carta-nav" aria-label="Categorías de la carta" data-en-aria-label="Menu categories">
-        <ul class="carta-nav__list" role="list">
-          <li><a class="chip" href="#c-antipastos" data-cat="antipastos" data-en="Antipasti">Antipastos</a></li>
-          <li><a class="chip" href="#c-croquetas" data-cat="croquetas" data-en="Homemade croquettes">Croquetas caseras</a></li>
-          <li><a class="chip" href="#c-panes" data-cat="panes" data-en="Artisan breads">Panes artesanales</a></li>
-          <li><a class="chip" href="#c-ensaladas" data-cat="ensaladas" data-en="Salads">Ensaladas</a></li>
-          <li><a class="chip" href="#c-patatas" data-cat="patatas" data-en="Our potatoes">Nuestras patatas</a></li>
-          <li><a class="chip" href="#c-pizzas" data-cat="pizzas" data-en="Roman pizzas">Pizzas romanas</a></li>
-          <li><a class="chip" href="#c-pizzasnapo" data-cat="pizzasnapo" data-en="Neapolitan pizzas">Pizzas napolitanas</a></li>
-          <li><a class="chip" href="#c-pinsas" data-cat="pinsas" data-en="Italo-Valencian pinsas">Pinsas italovalencianas</a></li>
-          <li><a class="chip" href="#c-pasta" data-cat="pasta" data-en="Homemade pasta">Pasta casera</a></li>
-          <li><a class="chip" href="#c-salsas" data-cat="salsas" data-en="Homemade sauces">Salsas caseras</a></li>
-          <li><a class="chip" href="#c-risottos" data-cat="risottos" data-en="Italian risottos">Risottos italianos</a></li>
-          <li><a class="chip" href="#c-granja" data-cat="granja" data-en="From the farm">De la granja</a></li>
-          <li><a class="chip" href="#c-mar" data-cat="mar" data-en="From the sea">Del mar</a></li>
-          <li><a class="chip" href="#c-postres" data-cat="postres" data-en="For the sweet-toothed">Para los más golosos</a></li>
+      <nav class="carta-index" aria-label="Secciones de la carta" data-en-aria-label="Menu sections">
+        <ul class="carta-index__list" role="list">
+          <li><a class="cidx" href="#c-antipastos" data-cat="antipastos"><span data-en="Antipasti">Antipastos</span><b>12</b></a></li>
+          <li><a class="cidx" href="#c-croquetas" data-cat="croquetas"><span data-en="Homemade croquettes">Croquetas caseras</span><b>4</b></a></li>
+          <li><a class="cidx" href="#c-panes" data-cat="panes"><span data-en="Artisan breads">Panes artesanales</span><b>3</b></a></li>
+          <li><a class="cidx" href="#c-ensaladas" data-cat="ensaladas"><span data-en="Salads">Ensaladas</span><b>3</b></a></li>
+          <li><a class="cidx" href="#c-patatas" data-cat="patatas"><span data-en="Our potatoes">Nuestras patatas</span><b>4</b></a></li>
+          <li><a class="cidx" href="#c-pizzas" data-cat="pizzas"><span data-en="Roman pizzas">Pizzas romanas</span><b>25</b></a></li>
+          <li><a class="cidx" href="#c-pizzasnapo" data-cat="pizzasnapo"><span data-en="Neapolitan pizzas">Pizzas napolitanas</span><b>4</b></a></li>
+          <li><a class="cidx" href="#c-pinsas" data-cat="pinsas"><span data-en="Italo-Valencian pinsas">Pinsas italovalencianas</span><b>4</b></a></li>
+          <li><a class="cidx" href="#c-pasta" data-cat="pasta"><span data-en="Homemade pasta">Pasta casera</span><b>7</b></a></li>
+          <li><a class="cidx" href="#c-salsas" data-cat="salsas"><span data-en="Homemade sauces">Salsas caseras</span><b>9</b></a></li>
+          <li><a class="cidx" href="#c-risottos" data-cat="risottos"><span data-en="Italian risottos">Risottos italianos</span><b>4</b></a></li>
+          <li><a class="cidx" href="#c-granja" data-cat="granja"><span data-en="From the farm">De la granja</span><b>3</b></a></li>
+          <li><a class="cidx" href="#c-mar" data-cat="mar"><span data-en="From the sea">Del mar</span><b>2</b></a></li>
+          <li><a class="cidx" href="#c-postres" data-cat="postres"><span data-en="For the sweet-toothed">Para los más golosos</span><b>4</b></a></li>
         </ul>
       </nav>
       <div class="carta-secs">
     <section class="carta-sec has-fig" id="c-antipastos" data-cat="antipastos" aria-labelledby="h-antipastos">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">01<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-antipastos" data-en="Antipasti">Antipastos</h3>
         
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/gambas-700.webp" srcset="assets/img/gambas-700.webp 700w, assets/img/gambas-1400.webp 1400w" sizes="(min-width: 1000px) 360px, 92vw" alt="Gambas al ajillo con tomate cherry y pimientos del padrón" data-en-alt="Garlic prawns with cherry tomatoes and padrón peppers" loading="lazy" decoding="async">
+        <img src="assets/img/gambas-700.webp" srcset="assets/img/gambas-700.webp 700w, assets/img/gambas-1400.webp 1400w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Gambas al ajillo con tomate cherry y pimientos del padrón" data-en-alt="Garlic prawns with cherry tomatoes and padrón peppers" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="crujiente de pollo rebozado en panko y maiz, con salsa barbacoa y patatas de boniato panko and corn-crumbed chicken with barbecue sauce and sweet potato fries">
@@ -375,12 +296,11 @@
 
     <section class="carta-sec has-fig" id="c-croquetas" data-cat="croquetas" aria-labelledby="h-croquetas">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">02<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-croquetas" data-en="Homemade croquettes">Croquetas caseras</h3>
         <span class="tag tag--fav" data-en="Fan favourite">Favorito</span><p class="carta-sec__note" data-en="Price per piece">Precio por unidad</p>
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/croquetas-periodico-700.webp" srcset="assets/img/croquetas-periodico-700.webp 700w, assets/img/croquetas-periodico-1400.webp 1400w" sizes="(min-width: 1000px) 360px, 92vw" alt="Croquetas caseras variadas servidas sobre papel de periódico" data-en-alt="Assorted homemade croquettes served on newspaper" loading="lazy" decoding="async">
+        <img src="assets/img/croquetas-periodico-700.webp" srcset="assets/img/croquetas-periodico-700.webp 700w, assets/img/croquetas-periodico-1400.webp 1400w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Croquetas caseras variadas servidas sobre papel de periódico" data-en-alt="Assorted homemade croquettes served on newspaper" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="jamon iberico  iberian ham">
@@ -405,12 +325,11 @@
 
     <section class="carta-sec has-fig" id="c-panes" data-cat="panes" aria-labelledby="h-panes">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">03<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-panes" data-en="Artisan breads">Panes artesanales</h3>
         
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/pan-pesto-600.webp" srcset="assets/img/pan-pesto-600.webp 600w, assets/img/pan-pesto-1000.webp 1000w" sizes="(min-width: 1000px) 360px, 92vw" alt="Pan tostado con pesto y aceitunas" data-en-alt="Toasted bread with pesto and olives" loading="lazy" decoding="async">
+        <img src="assets/img/pan-pesto-600.webp" srcset="assets/img/pan-pesto-600.webp 600w, assets/img/pan-pesto-1000.webp 1000w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Pan tostado con pesto y aceitunas" data-en-alt="Toasted bread with pesto and olives" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="pan de pueblo con tomate, alioli y aceitunas country bread with tomato, aioli and olives">
@@ -431,12 +350,11 @@
 
     <section class="carta-sec has-fig" id="c-ensaladas" data-cat="ensaladas" aria-labelledby="h-ensaladas">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">04<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-ensaladas" data-en="Salads">Ensaladas</h3>
         
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/burrata-600.webp" srcset="assets/img/burrata-600.webp 600w, assets/img/burrata-1000.webp 1000w" sizes="(min-width: 1000px) 360px, 92vw" alt="Burrata con pesto, rúcula y tostas de tomate" data-en-alt="Burrata with pesto, rocket and tomato toasts" loading="lazy" decoding="async">
+        <img src="assets/img/burrata-600.webp" srcset="assets/img/burrata-600.webp 600w, assets/img/burrata-1000.webp 1000w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Burrata con pesto, rúcula y tostas de tomate" data-en-alt="Burrata with pesto, rocket and tomato toasts" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="del cesar pollo rebozado, tomate cherry, tomate seco, salsa cesar y parmigiano crispy chicken, cherry and sun-dried tomato, caesar dressing and parmigiano">
@@ -457,12 +375,11 @@
 
     <section class="carta-sec has-fig" id="c-patatas" data-cat="patatas" aria-labelledby="h-patatas">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">05<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-patatas" data-en="Our potatoes">Nuestras patatas</h3>
         <p class="carta-sec__note" data-en="Served in the pan. Made for sharing.">Llegan en sartén. Para compartir.</p>
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/patatas-sarten-700.webp" srcset="assets/img/patatas-sarten-700.webp 700w, assets/img/patatas-sarten-1400.webp 1400w" sizes="(min-width: 1000px) 360px, 92vw" alt="Patatas llama a los bomberos servidas en sartén con pimientos del padrón" data-en-alt="'Call the firefighters' potatoes served in the pan with padrón peppers" loading="lazy" decoding="async">
+        <img src="assets/img/patatas-gratinadas-700.webp" srcset="assets/img/patatas-gratinadas-700.webp 700w, assets/img/patatas-gratinadas-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Patatas gratinadas con queso servidas en sartén" data-en-alt="Potatoes baked with cheese, served in the pan" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="patatas llama a los bomberos con salsa casera picante, pimientos del padron y alioli 'call the firefighters' potatoes: homemade hot sauce, padron peppers and aioli">
@@ -487,12 +404,11 @@
 
     <section class="carta-sec has-fig" id="c-pizzas" data-cat="pizzas" aria-labelledby="h-pizzas">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">06<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-pizzas" data-en="Roman pizzas">Pizzas romanas</h3>
         <p class="carta-sec__note" data-en="Thin crust">Masa fina</p>
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/pizza-rucula-700.webp" srcset="assets/img/pizza-rucula-700.webp 700w, assets/img/pizza-rucula-1400.webp 1400w" sizes="(min-width: 1000px) 360px, 92vw" alt="Pizza con rúcula, cebolla morada y tomate" data-en-alt="Pizza topped with rocket, red onion and tomato" loading="lazy" decoding="async">
+        <img src="assets/img/carta-romanas-700.webp" srcset="assets/img/carta-romanas-700.webp 700w, assets/img/carta-romanas-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Calzone y pizza de masa fina en una mesa de Basilico" data-en-alt="Calzone and thin-crust pizza on a Basilico table" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="arrabbiata pimiento italiano asado, tomate cherry, cebolla asada, pepperoni, chile y aceite picante roasted italian pepper, cherry tomato, roasted onion, pepperoni, chilli and hot oil">
@@ -601,12 +517,11 @@
 
     <section class="carta-sec has-fig" id="c-pizzasnapo" data-cat="pizzasnapo" aria-labelledby="h-pizzasnapo">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">07<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-pizzasnapo" data-en="Neapolitan pizzas">Pizzas napolitanas</h3>
         <p class="carta-sec__note" data-en="Puffy crust, oven-baked">Borde alto, al horno</p>
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/napolitana-600.webp" srcset="assets/img/napolitana-600.webp 600w, assets/img/napolitana-1000.webp 1000w" sizes="(min-width: 1000px) 360px, 92vw" alt="Pizza napolitana con borde alto y tomate cherry" data-en-alt="Neapolitan pizza with a puffy crust and cherry tomato" loading="lazy" decoding="async">
+        <img src="assets/img/carta-napolitanas-700.webp" srcset="assets/img/carta-napolitanas-700.webp 700w, assets/img/carta-napolitanas-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Pizza de borde alto y tostado con rúcula, tomate y cebolla morada" data-en-alt="Puffy, charred-crust pizza with rocket, tomato and red onion" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="carciofi alcachofas, huevo cocido, jamon serrano y pimientos del padron artichokes, boiled egg, serrano ham and padron peppers">
@@ -631,12 +546,11 @@
 
     <section class="carta-sec has-fig" id="c-pinsas" data-cat="pinsas" aria-labelledby="h-pinsas">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">08<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-pinsas" data-en="Italo-Valencian pinsas">Pinsas italovalencianas</h3>
         <span class="tag tag--iv" data-en="Italo-Valencian">Italovalenciano</span><p class="carta-sec__note" data-en="Long, airy dough">Masa alargada y aireada</p>
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/pinsa-padron-800.webp" srcset="assets/img/pinsa-padron-800.webp 800w, assets/img/pinsa-padron-1600.webp 1600w" sizes="(min-width: 1000px) 360px, 92vw" alt="Pinsa de chuletón con pimientos del padrón sobre mantel de cuadros" data-en-alt="Rib-eye pinsa with padrón peppers on a checked tablecloth" loading="lazy" decoding="async">
+        <img src="assets/img/carta-pinsas-700.webp" srcset="assets/img/carta-pinsas-700.webp 700w, assets/img/carta-pinsas-1200.webp 1200w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Pinsa alargada con mozzarella y tomate seco sobre tabla de madera" data-en-alt="Long pinsa with mozzarella and sun-dried tomato on a wooden board" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="pinsa de chuleton chuleton gallego, patata laminada, tomate, mozzarella, pimientos del padron y chimichurri galician rib-eye, sliced potato, tomato, mozzarella, padron peppers and chimichurri">
@@ -661,12 +575,11 @@
 
     <section class="carta-sec has-fig" id="c-pasta" data-cat="pasta" aria-labelledby="h-pasta">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">09<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-pasta" data-en="Homemade pasta">Pasta casera</h3>
         
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/rigatoni-pesto-700.webp" srcset="assets/img/rigatoni-pesto-700.webp 700w, assets/img/rigatoni-pesto-1400.webp 1400w" sizes="(min-width: 1000px) 360px, 92vw" alt="Rigatoni al pesto con hojas de albahaca en plato de cerámica azul" data-en-alt="Rigatoni with pesto and basil leaves on a blue ceramic plate" loading="lazy" decoding="async">
+        <img src="assets/img/rigatoni-pesto-700.webp" srcset="assets/img/rigatoni-pesto-700.webp 700w, assets/img/rigatoni-pesto-1400.webp 1400w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Rigatoni al pesto con hojas de albahaca en plato de cerámica azul" data-en-alt="Rigatoni with pesto and basil leaves on a blue ceramic plate" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body">
       <div class="carta-sub">
@@ -721,12 +634,11 @@
 
     <section class="carta-sec has-fig" id="c-salsas" data-cat="salsas" aria-labelledby="h-salsas">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">10<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-salsas" data-en="Homemade sauces">Salsas caseras</h3>
         <p class="carta-sec__note" data-en="Pick your egg pasta and pair it">Elige tu pasta al huevo y combínala</p>
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/tagliatelle-almejas-600.webp" srcset="assets/img/tagliatelle-almejas-600.webp 600w, assets/img/tagliatelle-almejas-1100.webp 1100w" sizes="(min-width: 1000px) 360px, 92vw" alt="Tagliatelle frutos del mar con almejas servidos en cazuela de hierro" data-en-alt="Seafood tagliatelle with clams served in a cast-iron pot" loading="lazy" decoding="async">
+        <img src="assets/img/tagliatelle-almejas-600.webp" srcset="assets/img/tagliatelle-almejas-600.webp 600w, assets/img/tagliatelle-almejas-1100.webp 1100w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Tagliatelle frutos del mar con almejas servidos en cazuela de hierro" data-en-alt="Seafood tagliatelle with clams served in a cast-iron pot" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="arrabbiata salsa picante casera, tomate cherry y pimientos del padron homemade spicy sauce, cherry tomato and padron peppers">
@@ -771,7 +683,6 @@
 
     <section class="carta-sec" id="c-risottos" data-cat="risottos" aria-labelledby="h-risottos">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">11<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-risottos" data-en="Italian risottos">Risottos italianos</h3>
         
       </header>
@@ -798,12 +709,11 @@
 
     <section class="carta-sec has-fig" id="c-granja" data-cat="granja" aria-labelledby="h-granja">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">12<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-granja" data-en="From the farm">De la granja</h3>
         
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/chuleton-700.webp" srcset="assets/img/chuleton-700.webp 700w, assets/img/chuleton-1300.webp 1300w" sizes="(min-width: 1000px) 360px, 92vw" alt="Chuletón a la brasa en cazuela de barro con verduras" data-en-alt="Grilled rib-eye in a clay dish with vegetables" loading="lazy" decoding="async">
+        <img src="assets/img/chuleton-700.webp" srcset="assets/img/chuleton-700.webp 700w, assets/img/chuleton-1300.webp 1300w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Chuletón a la brasa en cazuela de barro con verduras" data-en-alt="Grilled rib-eye in a clay dish with vegetables" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="solomillo solomillo de ternera, patatas fritas y pimientos del padron beef tenderloin with chips and padron peppers">
@@ -824,7 +734,6 @@
 
     <section class="carta-sec" id="c-mar" data-cat="mar" aria-labelledby="h-mar">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">13<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-mar" data-en="From the sea">Del mar</h3>
         
       </header>
@@ -843,12 +752,11 @@
 
     <section class="carta-sec has-fig" id="c-postres" data-cat="postres" aria-labelledby="h-postres">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">14<span>/14</span></span>
         <h3 class="carta-sec__title" id="h-postres" data-en="For the sweet-toothed">Para los más golosos</h3>
         
       </header>
       <figure class="carta-sec__fig">
-        <img src="assets/img/tarta-queso-800.webp" srcset="assets/img/tarta-queso-800.webp 800w, assets/img/tarta-queso-1600.webp 1600w" sizes="(min-width: 1000px) 360px, 92vw" alt="Tarta de queso casera con mermelada y helado en plato de cerámica" data-en-alt="Homemade cheesecake with jam and ice cream on a ceramic plate" loading="lazy" decoding="async">
+        <img src="assets/img/tarta-queso-800.webp" srcset="assets/img/tarta-queso-800.webp 800w, assets/img/tarta-queso-1600.webp 1600w" sizes="(min-width: 1000px) 30vw, 92vw" alt="Tarta de queso casera con mermelada y helado en plato de cerámica" data-en-alt="Homemade cheesecake with jam and ice cream on a ceramic plate" loading="lazy" decoding="async">
       </figure>
       <div class="carta-sec__body"><ul class="dishes" role="list">
         <li class="dish" data-search="torrija con helado de vainilla, crema inglesa, canela y crujiente de almendras spanish-style french toast with vanilla ice cream, custard, cinnamon and almond crunch">
@@ -875,19 +783,78 @@
         </div>
         <p class="carta-empty" data-carta-empty hidden><span data-en="Nothing on the menu with that word. Try another, or ask us: we adapt what we can.">Nada en la carta con esa palabra. Prueba con otra o pregúntanos: adaptamos lo que se puede.</span></p>
         <aside class="carta-foot">
-          <p><b data-en="Allergies or intolerances?">¿Alergias o intolerancias?</b> <span data-en="Tell us when ordering: we adapt what we can. Gluten-free pizza base available.">Avísanos al pedir: adaptamos lo que se puede. Tenemos masa de pizza sin gluten.</span></p>
-          <p><b data-en="Prices">Precios</b> <span data-en="as published on the current menu (October 2026). They may change.">según la carta vigente (octubre 2026). Pueden variar.</span></p>
+          <p><b data-en="Allergies or intolerances?">¿Alergias o intolerancias?</b> <span data-en="Tell us when ordering: we adapt what we can.">Avísanos al pedir: adaptamos lo que se puede.</span></p>
+          <p><span data-en="Prices as on the current menu (October 2026).">Precios según la carta vigente (octubre 2026).</span></p>
         </aside>
       </div>
     </section>
 
-    <!-- ============ 4 · SUCESOS ============ -->
+    <!-- ============ MEDIODÍA ============ -->
+    <section class="sec sec--mediodia" id="mediodia" aria-labelledby="mediodia-t">
+      <div class="wrap">
+        <header class="sec__head"><p class="sec__name" data-en="Lunch">Mediodía</p></header>
+        <div class="sec__intro sec__intro--split">
+          <h2 class="sec__title" id="mediodia-t" data-en="This week's set menus">Los menús de esta semana</h2>
+          <p class="sec__deck" data-en="A new edition every week: starter, main, dessert and a drink. It's announced first on Instagram.">Una edición nueva cada semana: primero, segundo, postre y bebida. Se anuncia primero en <a href="https://www.instagram.com/basilico_tavernetta/" target="_blank" rel="noopener">Instagram</a>.</p>
+        </div>
+        <div class="menus" data-menus>
+      <!-- build:menus -->
+      <article class="menu-card" data-menu="semana" data-from="2026-09-30" data-to="2026-10-02">
+        <header class="menu-card__head">
+          <p class="menu-card__state" data-state></p>
+          <h3 class="menu-card__title" data-en="Weekday set menu">Menú de la semana</h3>
+          <p class="menu-card__when" data-en="Wednesday to Friday · lunch">Miércoles a viernes · mediodía</p>
+          <p class="menu-card__price"><span>16 €</span><small data-en="per person">por persona</small></p>
+        </header>
+        
+        <div class="menu-card__course">
+          <h4 data-en="1 starter of your choice">1 primero a elegir</h4>
+          <ul role="list"><li data-en="Vitello tonnato with capers, tartare sauce, cherry tomato and rocket">Vitello tonnato con alcaparras, salsa tártara, tomate cherry y rúcula</li><li data-en="Meatballs in sauce with potatoes">Albóndigas en salsa con sus patatitas</li><li data-en="Italian bread">Pan italiano</li></ul>
+        </div>
+        <div class="menu-card__course">
+          <h4 data-en="1 main of your choice">1 segundo a elegir</h4>
+          <ul role="list"><li data-en="Fish stew">Cazuela de pescado</li><li data-en="Pork cheek in pepper sauce">Carrillada de cerdo en salsa de pimienta</li><li data-en="Meat ravioli with bolognese sauce">Raviolis de carne con salsa boloñesa</li><li data-en="Four-cheese Neapolitan pizza">Pizza napolitana 4 quesos</li></ul>
+        </div>
+        <div class="menu-card__course">
+          <h4 data-en="Dessert">Postre</h4>
+          <ul role="list"><li data-en="Homemade cheesecake">Tarta de queso casera</li></ul>
+        </div>
+        <p class="menu-card__incl"><strong data-en="Includes">Incluye</strong> <span data-en="1 drink (small water, soft drink, beer or glass of wine) and coffee">1 bebida (agua pequeña, refresco, tercio de cerveza o copa de vino) y café</span></p>
+        <p class="menu-card__src" data-edition></p>
+      </article>
+
+      <article class="menu-card" data-menu="finde" data-from="2026-10-03" data-to="2026-10-04">
+        <header class="menu-card__head">
+          <p class="menu-card__state" data-state></p>
+          <h3 class="menu-card__title" data-en="Weekend set menu">Menú de fin de semana</h3>
+          <p class="menu-card__when" data-en="Saturday and Sunday · lunch">Sábados y domingos · mediodía</p>
+          <p class="menu-card__price"><span>20 €</span><small data-en="per person">por persona</small></p>
+        </header>
+        
+        <div class="menu-card__course">
+          <h4 data-en="Starters">Primeros</h4>
+          <ul role="list"><li data-en="Country bread">Pan de pueblo</li><li data-en="Vitello tonnato">Vitello tonnato</li></ul>
+        </div>
+        <div class="menu-card__course">
+          <h4 data-en="Main of your choice">Segundo a elegir</h4>
+          <ul role="list"><li data-en="Lamb chops with 'a lo pobre' potatoes">Chuletitas de cordero con patatas a lo pobre</li><li data-en="Cod in tomato and seafood sauce">Bacalao en salsa de tomate y frutos del mar</li><li data-en="Ranchera Neapolitan pizza">Pizza napolitana ranchera</li><li data-en="Mushroom ravioli with pesto">Raviolis de setas con salsa de pesto</li><li data-en="Chicken risotto">Risotto del corral</li></ul>
+        </div>
+        <div class="menu-card__course">
+          <h4 data-en="Dessert">Postre</h4>
+          <ul role="list"><li data-en="Chocolate mousse">Mousse de chocolate</li></ul>
+        </div>
+        <p class="menu-card__incl"><strong data-en="Includes">Incluye</strong> <span data-en="1 drink (soft drink, small water, glass of wine or beer)">1 bebida (refresco, agua pequeña, copa de vino o tercio de cerveza)</span></p>
+        <p class="menu-card__src" data-edition></p>
+      </article>
+      <!-- /build:menus -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUCESOS ============ -->
     <section class="sec sec--sucesos" id="sucesos" aria-labelledby="sucesos-t">
       <div class="wrap">
-        <header class="sec__head">
-          <p class="sec__page"><span data-en="Page">Pág.</span> 4</p>
-          <p class="sec__name" data-en="Oddities">Sucesos</p>
-        </header>
+        <header class="sec__head"><p class="sec__name" data-en="Oddities">Sucesos</p></header>
         <div class="sec__intro">
           <h2 class="sec__title sec__title--tabloid" id="sucesos-t" data-en="Things that happen at Basilico's tables">Cosas que pasan en la mesa de Basilico</h2>
           <p class="sec__deck" data-en="Here, dishes don't always arrive on a plate. Photographic evidence supplied by the diners themselves.">En esta casa los platos no siempre llegan en plato. Pruebas gráficas aportadas por los propios comensales.</p>
@@ -900,13 +867,13 @@
             <p class="clip__body" data-en="Witnesses agree: the croquettes arrived hot and the waiter kept his sunglasses on all night.">Los testigos coinciden: las croquetas llegaron calientes y el camarero no se quitó las gafas en toda la noche.</p>
           </article>
           <article class="clip">
-            <figure><img src="assets/img/croquetas-bombin-600.webp" srcset="assets/img/croquetas-bombin-600.webp 600w, assets/img/croquetas-bombin-1100.webp 1100w" sizes="(min-width: 1000px) 22vw, 70vw" alt="Croquetas caseras servidas dentro de un sombrero bombín negro" data-en-alt="Homemade croquettes served inside a black bowler hat" width="1100" height="1466" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/croquetas-bombin-600.webp" srcset="assets/img/croquetas-bombin-600.webp 600w, assets/img/croquetas-bombin-1100.webp 1100w" sizes="(min-width: 1000px) 30vw, 70vw" alt="Croquetas caseras servidas dentro de un sombrero bombín negro" data-en-alt="Homemade croquettes served inside a black bowler hat" width="1100" height="1466" loading="lazy" decoding="async"></figure>
             <p class="clip__kicker" data-en="Croquettes">Croquetas</p>
             <h3 class="clip__title" data-en="Homemade croquettes found inside a bowler hat">Aparecen croquetas caseras dentro de un bombín</h3>
             <p class="clip__body" data-en="Iberian ham, porcini and truffle, red prawn or salt cod: 1.90 € each. The hat is on the house.">Jamón ibérico, boletus y trufa, gamba roja o bacalao: 1,90 € la unidad. El sombrero no se cobra.</p>
           </article>
           <article class="clip">
-            <figure><img src="assets/img/tiramisu-moka-600.webp" srcset="assets/img/tiramisu-moka-600.webp 600w, assets/img/tiramisu-moka-1000.webp 1000w" sizes="(min-width: 1000px) 22vw, 70vw" alt="Tiramisú servido dentro de una cafetera moka italiana abierta" data-en-alt="Tiramisu served inside an open Italian moka pot" width="1000" height="1776" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/tiramisu-moka-600.webp" srcset="assets/img/tiramisu-moka-600.webp 600w, assets/img/tiramisu-moka-1000.webp 1000w" sizes="(min-width: 1000px) 30vw, 70vw" alt="Tiramisú servido dentro de una cafetera moka italiana abierta" data-en-alt="Tiramisu served inside an open Italian moka pot" width="1000" height="1776" loading="lazy" decoding="async"></figure>
             <p class="clip__kicker" data-en="Desserts">Postres</p>
             <h3 class="clip__title" data-en="Tiramisu discovered inside an Italian coffee pot">Hallado un tiramisú dentro de una cafetera italiana</h3>
             <p class="clip__body" data-en="Spotted on a Basilico table. This time, the moka didn't make coffee. Ask about today's desserts.">Visto en una mesa de Basilico. La moka, esta vez, no hizo café. Pregunta por los postres del día.</p>
@@ -924,7 +891,7 @@
             <p class="clip__body" data-en="Everything points to the crispy chicken: panko, corn, barbecue sauce and sweet potato fries (12 €).">Todo apunta al crujiente de pollo: panko, maíz, salsa barbacoa y patatas de boniato (12 €).</p>
           </article>
           <article class="clip">
-            <figure><img src="assets/img/helado-playa-600.webp" srcset="assets/img/helado-playa-600.webp 600w, assets/img/helado-playa-1000.webp 1000w" sizes="(min-width: 1000px) 22vw, 70vw" alt="Postre de helado con cucurucho del revés sobre arena de galleta" data-en-alt="Ice cream dessert with an upside-down cone on biscuit sand" width="1000" height="2220" loading="lazy" decoding="async"></figure>
+            <figure><img src="assets/img/helado-playa-600.webp" srcset="assets/img/helado-playa-600.webp 600w, assets/img/helado-playa-1000.webp 1000w" sizes="(min-width: 1000px) 30vw, 70vw" alt="Postre de helado con cucurucho del revés sobre arena de galleta" data-en-alt="Ice cream dessert with an upside-down cone on biscuit sand" width="1000" height="2220" loading="lazy" decoding="async"></figure>
             <p class="clip__kicker" data-en="Desserts">Postres</p>
             <h3 class="clip__title" data-en="Ice cream has a bad day at the beach">Un helado sufre un mal día en la playa</h3>
             <p class="clip__body" data-en="Upside-down cone, biscuit sand and hot chocolate. That's literally the dessert's name: «Un mal día en la playa» (7.50 €).">Cucurucho del revés, arena de galleta y chocolate caliente. Así se llama el postre: «Un mal día en la playa» (7,50 €).</p>
@@ -933,87 +900,67 @@
       </div>
     </section>
 
-    <!-- ============ 5 · LA CASA ============ -->
+    <!-- ============ LA CASA ============ -->
     <section class="sec sec--casa" id="casa" aria-labelledby="casa-t">
       <div class="wrap">
-        <header class="sec__head">
-          <p class="sec__page"><span data-en="Page">Pág.</span> 5</p>
-          <p class="sec__name" data-en="Feature">Reportaje</p>
-        </header>
+        <header class="sec__head"><p class="sec__name" data-en="Feature">Reportaje</p></header>
         <div class="casa">
           <div class="casa__text">
             <h2 class="sec__title" id="casa-t" data-en="A house with a paper ceiling">Una casa con el techo de papel</h2>
-            <p class="sec__deck" data-en="Newspapers on the ceiling, a bicycle hanging over the tables, tiles, a turquoise fireplace and a mural raising a glass of wine. That's where this newspaper comes from.">Periódicos en el techo, una bicicleta colgada sobre las mesas, azulejos, una chimenea turquesa y un mural que brinda con vino. De ahí sale este periódico.</p>
+            <p class="sec__deck" data-en="Newspapers on the ceiling, a bicycle hanging over the tables, tiles and a mural raising a glass of wine. That's where this newspaper comes from.">Periódicos en el techo, una bicicleta colgada sobre las mesas, azulejos y un mural que brinda con vino. De ahí sale este periódico.</p>
             <div class="casa__cols">
               <p data-en="Basilico is a small tavernetta on Avinguda de la Pau in Beniarbeig, with a terrace on the street and a dining room that seems furnished with memories. First-timers usually look up.">Basilico es una tavernetta pequeña en la Avinguda de la Pau de Beniarbeig, con terraza a la calle y una sala que parece decorada a base de recuerdos. Quien entra por primera vez suele mirar hacia arriba.</p>
-              <p data-en="Marcelo in the kitchen, Renata in the dining room — or so the reviews tell it, repeating the same words over and over: family service, generous portions, «like being at home».">En la cocina, Marcelo; en la sala, Renata. Así lo cuentan las reseñas, que repiten las mismas palabras una y otra vez: trato familiar, raciones generosas, «como en casa».</p>
+              <p data-en="The reviews repeat the same words over and over: family service, generous portions, «like being at home». And they name Renata in the dining room and Marcelo in the kitchen.">Las reseñas repiten las mismas palabras una y otra vez: trato familiar, raciones generosas, «como en casa». Y ponen nombre: Renata en la sala, Marcelo en la cocina.</p>
               <p data-en="The cooking mixes without hang-ups: Neapolitan dough with padrón peppers, pinsas with chimichurri, cuttlefish figatells in a mini burger, picaeta on pizza bread. Italo-Valencian, as they call it themselves.">La cocina mezcla sin complejos: masa napolitana con pimientos del padrón, pinsas con chimichurri, figatells de sepia en mini burger, picaeta sobre pan de pizza. Italovalenciana, como la llaman ellos.</p>
             </div>
-            <blockquote class="pull">
-              <p data-en="«They recognised us straight away and treated us like we were family.»">«Nos conocieron enseguida y nos trataron como si fuésemos de casa.»</p>
-              <cite data-en="Review on Google Maps (translated)">Reseña en Google Maps</cite>
-            </blockquote>
           </div>
           <div class="casa__photos">
-            <figure class="ph ph--techo"><img src="assets/img/techo-periodicos-800.webp" srcset="assets/img/techo-periodicos-800.webp 800w, assets/img/techo-periodicos-1400.webp 1400w" sizes="(min-width: 1000px) 32vw, 92vw" alt="Techo de la sala forrado de páginas de periódico con libros y plantas colgando" data-en-alt="Dining-room ceiling papered with newspaper pages, with books and plants hanging" width="1400" height="1400" loading="lazy" decoding="async"><figcaption data-en="The ceiling, papered with newspapers.">El techo, forrado de periódicos.</figcaption></figure>
-            <figure class="ph ph--mural"><img src="assets/img/mural-800.webp" srcset="assets/img/mural-800.webp 800w, assets/img/mural-1600.webp 1600w" sizes="(min-width: 1000px) 32vw, 92vw" alt="Mural de una pareja brindando con vino sobre una pared de azulejos, junto a un teléfono antiguo" data-en-alt="Mural of a couple toasting with wine above a tiled wall, beside a vintage telephone" width="1600" height="1200" loading="lazy" decoding="async"><figcaption data-en="The mural by the bar.">El mural de la barra.</figcaption></figure>
-            <figure class="ph ph--chimenea"><img src="assets/img/chimenea-800.webp" srcset="assets/img/chimenea-800.webp 800w, assets/img/chimenea-1600.webp 1600w" sizes="(min-width: 1000px) 32vw, 92vw" alt="Chimenea con azulejos en una pared turquesa, con sofás y una bicicleta" data-en-alt="Tiled fireplace on a turquoise wall, with sofas and a bicycle" width="1600" height="1200" loading="lazy" decoding="async"><figcaption data-en="The turquoise fireplace.">La chimenea turquesa.</figcaption></figure>
+            <figure class="ph ph--techo"><img src="assets/img/techo-periodicos-800.webp" srcset="assets/img/techo-periodicos-800.webp 800w, assets/img/techo-periodicos-1400.webp 1400w" sizes="(min-width: 1000px) 36vw, 92vw" alt="Techo de la sala forrado de páginas de periódico con libros y plantas colgando" data-en-alt="Dining-room ceiling papered with newspaper pages, with books and plants hanging" width="1400" height="1400" loading="lazy" decoding="async"><figcaption data-en="The ceiling, papered with newspapers.">El techo, forrado de periódicos.</figcaption></figure>
+            <figure class="ph ph--barra"><img src="assets/img/barra-800.webp" srcset="assets/img/barra-800.webp 800w, assets/img/barra-1600.webp 1600w" sizes="(min-width: 1000px) 24vw, 92vw" alt="La barra de Basilico con frente de azulejos, estanterías turquesa y pizarra" data-en-alt="Basilico's bar with a tiled front, turquoise shelves and a chalkboard" width="1600" height="1200" loading="lazy" decoding="async"><figcaption data-en="The bar: tiles and turquoise.">La barra: azulejo y turquesa.</figcaption></figure>
             <figure class="ph ph--bici"><img src="assets/img/bici-1024.webp" alt="Bicicleta turquesa colgada del techo de madera con flores" data-en-alt="Turquoise bicycle hanging from the wooden ceiling with flowers" width="1024" height="460" loading="lazy" decoding="async"><figcaption data-en="The bicycle, hanging over the tables.">La bicicleta, colgada sobre las mesas.</figcaption></figure>
+            <figure class="ph ph--mural"><img src="assets/img/mural-800.webp" srcset="assets/img/mural-800.webp 800w, assets/img/mural-1600.webp 1600w" sizes="(min-width: 1000px) 24vw, 92vw" alt="Mural de una pareja brindando con vino sobre una pared de azulejos, junto a un teléfono antiguo" data-en-alt="Mural of a couple toasting with wine above a tiled wall, beside a vintage telephone" width="1600" height="1200" loading="lazy" decoding="async"><figcaption data-en="The mural by the bar.">El mural de la barra.</figcaption></figure>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 6 · LECTORES ============ -->
+    <!-- ============ LECTORES ============ -->
     <section class="sec sec--lectores" id="lectores" aria-labelledby="lectores-t">
       <div class="wrap">
-        <header class="sec__head">
-          <p class="sec__page"><span data-en="Page">Pág.</span> 6</p>
-          <p class="sec__name" data-en="Opinion">Opinión</p>
-        </header>
-        <div class="sec__intro sec__intro--split">
-          <h2 class="sec__title" id="lectores-t" data-en="Letters from our readers">Cartas de los lectores</h2>
+        <header class="sec__head"><p class="sec__name" data-en="Letters">Cartas de los lectores</p></header>
+        <div class="lectores">
           <div class="rating">
-            <p class="rating__num">4,6<span>/5</span></p>
-            <p class="rating__txt"><span data-en="291 reviews on Google. A few lines that keep coming up:">291 opiniones en Google. Algunas frases que se repiten:</span></p>
+            <h2 class="sr" id="lectores-t" data-en="Letters from our readers">Cartas de los lectores</h2>
+            <p class="rating__num">4,6</p>
+            <p class="rating__txt"><span data-en="out of 5, from 291 reviews on Google">de 5, en 291 opiniones de Google</span><br><a href="https://maps.google.com/?cid=1888159510793407045" target="_blank" rel="noopener" data-en="Read them all →">Leerlas todas →</a></p>
           </div>
+          <ul class="letters" role="list">
+            <li class="letter letter--big"><p data-en="«They recognised us straight away and treated us like we were family.»">«Nos conocieron enseguida y nos trataron como si fuésemos de casa.»</p><span data-en="On the service">Sobre el trato</span></li>
+            <li class="letter"><p data-en="«The parmigiana is a marvel.»">«La parmigiana es una maravilla.»</p><span data-en="On the antipasti">Sobre los antipastos</span></li>
+            <li class="letter"><p data-en="«The cannelloni I ordered could easily have fed three people.»">«Los canelones que pedí habrían alimentado fácilmente a tres personas.»</p><span data-en="On the pasta (translated)">Sobre la pasta (traducida)</span></li>
+            <li class="letter"><p data-en="«Three couples went for dinner with our dogs on the terrace and they didn't object at all.»">«Fuimos 3 parejas a cenar con nuestros perros a la terraza y no nos pusieron ninguna pega.»</p><span data-en="On the terrace">Sobre la terraza</span></li>
+          </ul>
         </div>
-        <ul class="letters" role="list">
-          <li class="letter letter--big"><p data-en="«It's impossible to leave hungry!»">«¡Es imposible irse con hambre!»</p><span data-en="On the portions (translated)">Sobre las raciones (traducida)</span></li>
-          <li class="letter"><p data-en="«A pizzeria with 3 types of dough, each pizza better than the last.»">«Pizzería con 3 tipos de masa, pizzas diferentes, cada cual mejor.»</p><span data-en="On the pizzas">Sobre las pizzas</span></li>
-          <li class="letter"><p data-en="«The best pizza I've ever eaten…»">«La mejor pizza que he comido en mi vida…»</p><span data-en="On the guanciale Neapolitan">Sobre la napolitana de guanciale</span></li>
-          <li class="letter"><p data-en="«The parmigiana is a marvel.»">«La parmigiana es una maravilla.»</p><span data-en="On the antipasti">Sobre los antipastos</span></li>
-          <li class="letter"><p data-en="«The cannelloni I ordered could easily have fed three people.»">«Los canelones que pedí habrían alimentado fácilmente a tres personas.»</p><span data-en="On the pasta (translated)">Sobre la pasta (traducida)</span></li>
-          <li class="letter"><p data-en="«Three couples went for dinner with our dogs on the terrace and they didn't object at all.»">«Fuimos 3 parejas a cenar con nuestros perros a la terraza y no nos pusieron ninguna pega.»</p><span data-en="On the terrace">Sobre la terraza</span></li>
-        </ul>
-        <p class="letters__links">
-          <a class="btn btn--ghost" href="https://maps.google.com/?cid=1888159510793407045" target="_blank" rel="noopener" data-en="Read all reviews on Google">Leer todas las reseñas en Google</a>
-        </p>
       </div>
     </section>
 
-    <!-- ============ 7 · CLASIFICADOS ============ -->
+    <!-- ============ CLASIFICADOS ============ -->
     <section class="sec sec--clasif" id="domicilio" aria-labelledby="domicilio-t">
       <div class="wrap">
-        <header class="sec__head">
-          <p class="sec__page"><span data-en="Page">Pág.</span> 7</p>
-          <p class="sec__name" data-en="Classifieds">Clasificados</p>
-        </header>
-        <div class="sec__intro">
-          <h2 class="sec__title" id="domicilio-t" data-en="For when you'd rather stay home (or not)">Para cuando no apetece salir de casa (o sí)</h2>
-        </div>
+        <header class="sec__head"><p class="sec__name" data-en="Classifieds">Clasificados</p></header>
+        <h2 class="sr" id="domicilio-t" data-en="Delivery, takeaway and more">A domicilio, para llevar y más</h2>
         <div class="clasif">
           <article class="ad ad--big">
             <h3 class="ad__title" data-en="Home delivery">Se reparte a domicilio</h3>
             <p class="ad__lead" data-en="Burgers, pizzas, pinsas, kebab, American-style ribs and milanesas.">Burgers, pizzas, pinsas, kebab, costillas americanas y milanesas.</p>
             <p class="ad__when"><b data-en="Wednesday to Sunday">Miércoles a domingo</b> · 19:00–23:30</p>
-            <p class="ad__towns"><span data-en="We deliver to">Llegamos a</span> <span class="towns">Sagra · Ràfol d'Almúnia · Sanet y Negrals · Benimeli · Beniarbeig · Els Poblets · Benidoleig · Ondara · El Verger · Pedreguer</span> <span data-en="… and around. Ask about your town.">… y alrededores. Pregunta por tu pueblo.</span></p>
+            <p class="ad__towns">Sagra · Ràfol d'Almúnia · Sanet y Negrals · Benimeli · Beniarbeig · Els Poblets · Benidoleig · Ondara · El Verger · Pedreguer <span data-en="… and around.">… y alrededores.</span></p>
             <p class="ad__small" data-en="Orders under 30 €: 3 € delivery charge.">Pedidos de menos de 30 €: 3 € de envío.</p>
-            <a class="btn btn--tomato" href="tel:+34652823117"><span data-en="Order on">Pide al</span>&nbsp;652 823 117</a>
+            <a class="btn btn--sun" href="tel:+34652823117"><span data-en="Order on">Pide al</span>&nbsp;652 823 117</a>
           </article>
           <article class="ad">
             <h3 class="ad__title" data-en="Takeaway">Para llevar</h3>
-            <p data-en="Order by phone and pick it up at Basilico, Avinguda de la Pau 15.">Encarga por teléfono y recoge en Basilico, Avinguda de la Pau 15.</p>
+            <p data-en="Order by phone and pick it up at Avinguda de la Pau 15.">Encarga por teléfono y recoge en la Avinguda de la Pau 15.</p>
           </article>
           <article class="ad">
             <h3 class="ad__title" data-en="Dogs welcome">Se admiten perros</h3>
@@ -1021,31 +968,23 @@
           </article>
           <article class="ad">
             <h3 class="ad__title" data-en="Gluten-free">Sin gluten</h3>
-            <p data-en="Gluten-free pizza base and gluten-free cheesecake. Tell us about any allergy.">Masa de pizza sin gluten y tarta de queso sin gluten. Avisa de cualquier alergia.</p>
+            <p data-en="Gluten-free pizza base and cheesecake. Tell us about any allergy.">Masa de pizza y tarta de queso sin gluten. Avisa de cualquier alergia.</p>
           </article>
           <article class="ad">
             <h3 class="ad__title" data-en="Groups">Grupos</h3>
             <p data-en="Birthday, work lunch, the whole gang? Call ahead and we'll set the table.">¿Cumpleaños, comida de empresa, la peña? Llama con antelación y os preparamos la mesa.</p>
           </article>
-          <article class="ad ad--wanted">
-            <h3 class="ad__title" data-en="Wanted">Se busca</h3>
-            <p data-en="Your opinion. If you enjoyed it, tell people on Google: it helps more than you think.">Tu opinión. Si te ha gustado, cuéntalo en Google: nos ayuda más de lo que crees.</p>
-            <a href="https://maps.google.com/?cid=1888159510793407045" target="_blank" rel="noopener" data-en="Write a review →">Escribir una reseña →</a>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ 8 · VISÍTANOS ============ -->
+    <!-- ============ VISÍTANOS ============ -->
     <section class="sec sec--visit" id="visitanos" aria-labelledby="visit-t">
       <div class="wrap">
-        <header class="sec__head">
-          <p class="sec__page"><span data-en="Page">Pág.</span> 8</p>
-          <p class="sec__name" data-en="Practical info">Información práctica</p>
-        </header>
+        <header class="sec__head"><p class="sec__name" data-en="Visit us">Visítanos</p></header>
         <div class="visit">
           <div class="visit__info">
-            <h2 class="sec__title" id="visit-t" data-en="How to get here, when to come">Cómo llegar, cuándo venir</h2>
+            <h2 class="sec__title" id="visit-t" data-en="Look for the string lights">Busca la guirnalda de luces</h2>
             <address class="visit__addr">
               <b>Basilico Tavernetta Italovalenciana</b><br>
               Avinguda de la Pau, 15<br>
@@ -1067,12 +1006,12 @@
                 <tr data-day="2" class="is-closed"><th scope="row" data-en="Tuesday">Martes</th><td data-en="Closed">Cerrado</td></tr>
               </tbody>
             </table>
-            <p class="hours__note" data-en="Hours may change on public holidays and during the village fiestas.">El horario puede variar en festivos y fiestas del pueblo.</p>
+            <p class="hours__note" data-en="Hours may change on public holidays and during the village fiestas. Weekends fill up: booking recommended.">El horario puede variar en festivos y fiestas del pueblo. El fin de semana se llena: mejor reservar.</p>
           </div>
           <div class="visit__map">
             <figure class="map" data-map>
               <img src="assets/img/fachada-noche-800.webp" srcset="assets/img/fachada-noche-800.webp 800w, assets/img/fachada-noche-1600.webp 1600w" sizes="(min-width: 1000px) 50vw, 92vw" alt="Fachada de Basilico de noche: rótulo, contraventana turquesa, guirnalda de luces y plantas en la acera" data-en-alt="Basilico's façade at night: sign, turquoise shutter, string lights and plants on the pavement" width="1600" height="1200" loading="lazy" decoding="async">
-              <figcaption><span data-en="Avinguda de la Pau, 15. Look for the string lights.">Avinguda de la Pau, 15. Busca la guirnalda de luces.</span></figcaption>
+              <figcaption><span data-en="Avinguda de la Pau, 15, Beniarbeig.">Avinguda de la Pau, 15, Beniarbeig.</span></figcaption>
               <button class="btn btn--paper map__load" type="button" data-map-load data-en="Load Google map">Cargar mapa de Google</button>
             </figure>
           </div>
@@ -1080,18 +1019,13 @@
       </div>
     </section>
 
-    <!-- ============ 9 · SUPLEMENTO ============ -->
+    <!-- ============ SUPLEMENTO ============ -->
     <section class="suple" id="suplemento" aria-labelledby="suple-t">
       <div class="wrap suple__in">
         <div class="suple__text">
-          <p class="suple__label"><span data-en="Page 9 · Supplement">Pág. 9 · Suplemento</span></p>
+          <p class="suple__label" data-en="Supplement · Benimeli">Suplemento · Benimeli</p>
           <h2 class="suple__title" id="suple-t">Basilico<wbr><span>&amp;</span>Spritz</h2>
-          <p class="suple__deck" data-en="Spritz, burgers, ribs and live music by the municipal pool in Benimeli. And no, we don't close in winter.">Spritz, burgers, costillas y música en directo junto a la piscina municipal de Benimeli. Y no, no cerramos en invierno.</p>
-          <ul class="suple__hours" role="list">
-            <li><b data-en="Fri">Vie</b> 19–23 h</li>
-            <li><b data-en="Sat">Sáb</b> 13–16 · 20–23 h</li>
-            <li><b data-en="Sun">Dom</b> 12–16 h</li>
-          </ul>
+          <p class="suple__deck" data-en="Our bar-terrace at the Benimeli municipal pool is on holiday. It comes back very soon with a renewed menu and a covered terrace.">Nuestro bar-terraza de la piscina municipal de Benimeli está de vacaciones. Vuelve muy pronto con carta renovada y terraza cubierta.</p>
           <a class="btn btn--sun" href="spritz.html" data-en="Open the supplement →">Abrir el suplemento →</a>
         </div>
         <figure class="suple__fig">
@@ -1118,8 +1052,8 @@
         </div>
         <div>
           <h2 class="foot__h" data-en="Colophon">Imprenta</h2>
-          <p data-en="Photographs: real pictures of Basilico posted by guests on Google Maps.">Fotografías: imágenes reales de Basilico publicadas por clientes en Google Maps.</p>
-          <p data-en="Basilico · Italo-Valencian tavernetta · Marina Alta">Basilico · Tavernetta italovalenciana · Marina Alta</p>
+          <p data-en="Photographs: real pictures of Basilico posted on Google Maps by guests and by the house.">Fotografías: imágenes reales de Basilico publicadas en Google Maps por clientes y por la casa.</p>
+          <p class="foot__paper">La Gazzetta Italovalenciana</p>
         </div>
       </div>
     </div>

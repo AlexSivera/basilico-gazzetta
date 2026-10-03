@@ -10,18 +10,93 @@
       "img_alt_es": "Gambas al ajillo con tomate cherry y pimientos del padrón",
       "img_alt_en": "Garlic prawns with cherry tomatoes and padrón peppers",
       "items": [
-        { "name": "Crujiente de pollo", "price": "12 €", "es": "Rebozado en panko y maíz, con salsa barbacoa y patatas de boniato", "en": "Panko and corn-crumbed chicken with barbecue sauce and sweet potato fries" },
-        { "name": "Pan de pizza y gambas", "price": "15 €", "es": "Pan de pizza, gambitas, mozzarella gratinada, mantequilla y picaeta", "en": "Pizza bread with baby prawns, melted mozzarella, butter and Valencian garlic-parsley picaeta", "tags": ["iv"] },
-        { "name": "Albóndigas al estilo Basilico", "price": "14 €", "es": "Salsa de mostaza, nata vegetal, setas, pimienta y mozzarella", "en": "Meatballs in mustard sauce with plant-based cream, mushrooms, pepper and mozzarella", "tags": ["fav"] },
-        { "name": "Parmigiana de melanzane", "price": "15 €", "es": "Burrata, tomate, berenjenas, mozzarella, cebolla y pimientos", "en": "Baked aubergine with burrata, tomato, mozzarella, onion and peppers", "tags": ["fav"] },
-        { "name": "Pulpo", "price": "20 €", "es": "Pata de pulpo con crema de patatas, huevo a baja temperatura, pimientos del padrón y crujiente de boniato", "en": "Octopus leg with potato cream, slow-cooked egg, padrón peppers and sweet potato crisps" },
-        { "name": "Vitello tonnato", "price": "13,50 €", "es": "Redondo de ternera, salsa Basilico, alcaparras, rúcula y pimienta", "en": "Thin-sliced veal with Basilico tuna sauce, capers, rocket and pepper" },
-        { "name": "Alcachofas confitadas", "price": "13,50 €", "es": "Corazón de alcachofas, salsa Basilico, jamón serrano, tomate seco y burrata", "en": "Confit artichoke hearts with Basilico sauce, serrano ham, sun-dried tomato and burrata" },
-        { "name": "Calamares a la andaluza", "price": "11,50 €", "es": "Calamares con salsa tártara, sobre una base de pan italiano y rúcula", "en": "Fried squid with tartare sauce on Italian bread and rocket" },
-        { "name": "Bravas de berenjenas", "price": "12,50 €", "es": "Con salsa picante casera, pimientos del padrón, salsa de soja y teriyaki", "en": "Aubergine 'bravas' with homemade spicy sauce, padrón peppers, soy and teriyaki", "tags": ["fav"] },
-        { "name": "Calamares a la romana", "price": "12,50 €", "es": "Acompañados de patatas de boniato y salsa Basilico", "en": "Battered squid rings with sweet potato fries and Basilico sauce" },
-        { "name": "Mini burger de figatells de sepia", "price": "12 € · 3 ud.", "es": "Con crujiente de cacahuetes, tomate seco, rúcula, mayonesa japonesa y patatas de boniato", "en": "Three mini burgers of Valencian cuttlefish figatells with peanut crunch, sun-dried tomato, rocket, Japanese mayo and sweet potato fries", "tags": ["iv"] },
-        { "name": "Gambas al ajillo", "price": "12 €", "es": "En aceite de oliva, ajos tiernos, tomate cherry y pimientos del padrón", "en": "Prawns in olive oil with tender garlic, cherry tomatoes and padrón peppers" }
+        {
+          "name": "Crujiente de pollo",
+          "price": "12 €",
+          "es": "Rebozado en panko y maíz, con salsa barbacoa y patatas de boniato",
+          "en": "Panko and corn-crumbed chicken with barbecue sauce and sweet potato fries"
+        },
+        {
+          "name": "Pan de pizza y gambas",
+          "price": "15 €",
+          "es": "Pan de pizza, gambitas, mozzarella gratinada, mantequilla y picaeta",
+          "en": "Pizza bread with baby prawns, melted mozzarella, butter and Valencian garlic-parsley picaeta",
+          "tags": [
+            "iv"
+          ]
+        },
+        {
+          "name": "Albóndigas al estilo Basilico",
+          "price": "14 €",
+          "es": "Salsa de mostaza, nata vegetal, setas, pimienta y mozzarella",
+          "en": "Meatballs in mustard sauce with plant-based cream, mushrooms, pepper and mozzarella",
+          "tags": [
+            "fav"
+          ]
+        },
+        {
+          "name": "Parmigiana de melanzane",
+          "price": "15 €",
+          "es": "Burrata, tomate, berenjenas, mozzarella, cebolla y pimientos",
+          "en": "Baked aubergine with burrata, tomato, mozzarella, onion and peppers",
+          "tags": [
+            "fav"
+          ]
+        },
+        {
+          "name": "Pulpo",
+          "price": "20 €",
+          "es": "Pata de pulpo con crema de patatas, huevo a baja temperatura, pimientos del padrón y crujiente de boniato",
+          "en": "Octopus leg with potato cream, slow-cooked egg, padrón peppers and sweet potato crisps"
+        },
+        {
+          "name": "Vitello tonnato",
+          "price": "13,50 €",
+          "es": "Redondo de ternera, salsa Basilico, alcaparras, rúcula y pimienta",
+          "en": "Thin-sliced veal with Basilico tuna sauce, capers, rocket and pepper"
+        },
+        {
+          "name": "Alcachofas confitadas",
+          "price": "13,50 €",
+          "es": "Corazón de alcachofas, salsa Basilico, jamón serrano, tomate seco y burrata",
+          "en": "Confit artichoke hearts with Basilico sauce, serrano ham, sun-dried tomato and burrata"
+        },
+        {
+          "name": "Calamares a la andaluza",
+          "price": "11,50 €",
+          "es": "Calamares con salsa tártara, sobre una base de pan italiano y rúcula",
+          "en": "Fried squid with tartare sauce on Italian bread and rocket"
+        },
+        {
+          "name": "Bravas de berenjenas",
+          "price": "12,50 €",
+          "es": "Con salsa picante casera, pimientos del padrón, salsa de soja y teriyaki",
+          "en": "Aubergine 'bravas' with homemade spicy sauce, padrón peppers, soy and teriyaki",
+          "tags": [
+            "fav"
+          ]
+        },
+        {
+          "name": "Calamares a la romana",
+          "price": "12,50 €",
+          "es": "Acompañados de patatas de boniato y salsa Basilico",
+          "en": "Battered squid rings with sweet potato fries and Basilico sauce"
+        },
+        {
+          "name": "Mini burger de figatells de sepia",
+          "price": "12 € · 3 ud.",
+          "es": "Con crujiente de cacahuetes, tomate seco, rúcula, mayonesa japonesa y patatas de boniato",
+          "en": "Three mini burgers of Valencian cuttlefish figatells with peanut crunch, sun-dried tomato, rocket, Japanese mayo and sweet potato fries",
+          "tags": [
+            "iv"
+          ]
+        },
+        {
+          "name": "Gambas al ajillo",
+          "price": "12 €",
+          "es": "En aceite de oliva, ajos tiernos, tomate cherry y pimientos del padrón",
+          "en": "Prawns in olive oil with tender garlic, cherry tomatoes and padrón peppers"
+        }
       ]
     },
     {
@@ -33,12 +108,34 @@
       "img": "croquetas-periodico",
       "img_alt_es": "Croquetas caseras variadas servidas sobre papel de periódico",
       "img_alt_en": "Assorted homemade croquettes served on newspaper",
-      "tags": ["fav"],
+      "tags": [
+        "fav"
+      ],
       "items": [
-        { "name": "Jamón ibérico", "price": "1,90 €", "es": "", "en": "Iberian ham" },
-        { "name": "Boletus y trufa", "price": "1,90 €", "es": "", "en": "Porcini and truffle" },
-        { "name": "Gamba roja", "price": "1,90 €", "es": "", "en": "Red prawn" },
-        { "name": "Bacalao", "price": "1,90 €", "es": "", "en": "Salt cod" }
+        {
+          "name": "Jamón ibérico",
+          "price": "1,90 €",
+          "es": "",
+          "en": "Iberian ham"
+        },
+        {
+          "name": "Boletus y trufa",
+          "price": "1,90 €",
+          "es": "",
+          "en": "Porcini and truffle"
+        },
+        {
+          "name": "Gamba roja",
+          "price": "1,90 €",
+          "es": "",
+          "en": "Red prawn"
+        },
+        {
+          "name": "Bacalao",
+          "price": "1,90 €",
+          "es": "",
+          "en": "Salt cod"
+        }
       ]
     },
     {
@@ -49,9 +146,27 @@
       "img_alt_es": "Pan tostado con pesto y aceitunas",
       "img_alt_en": "Toasted bread with pesto and olives",
       "items": [
-        { "name": "Pan de pueblo", "price": "4,50 €", "es": "Con tomate, alioli y aceitunas", "en": "Country bread with tomato, aioli and olives", "tags": ["fav"] },
-        { "name": "Focaccia burrata", "price": "7 €", "es": "Con aceitunas, tomate seco, burrata y serrano", "en": "Focaccia with olives, sun-dried tomato, burrata and serrano ham" },
-        { "name": "Pan italiano", "price": "6,50 €", "es": "Relleno de mozzarella, ajos y aceite picante. Con picaeta de ajo y perejil", "en": "Italian bread stuffed with mozzarella, garlic and chilli oil, topped with garlic-parsley picaeta" }
+        {
+          "name": "Pan de pueblo",
+          "price": "4,50 €",
+          "es": "Con tomate, alioli y aceitunas",
+          "en": "Country bread with tomato, aioli and olives",
+          "tags": [
+            "fav"
+          ]
+        },
+        {
+          "name": "Focaccia burrata",
+          "price": "7 €",
+          "es": "Con aceitunas, tomate seco, burrata y serrano",
+          "en": "Focaccia with olives, sun-dried tomato, burrata and serrano ham"
+        },
+        {
+          "name": "Pan italiano",
+          "price": "6,50 €",
+          "es": "Relleno de mozzarella, ajos y aceite picante. Con picaeta de ajo y perejil",
+          "en": "Italian bread stuffed with mozzarella, garlic and chilli oil, topped with garlic-parsley picaeta"
+        }
       ]
     },
     {
@@ -62,9 +177,24 @@
       "img_alt_es": "Burrata con pesto, rúcula y tostas de tomate",
       "img_alt_en": "Burrata with pesto, rocket and tomato toasts",
       "items": [
-        { "name": "Del César", "price": "12,50 €", "es": "Pollo rebozado, tomate cherry, tomate seco, salsa césar y parmigiano", "en": "Crispy chicken, cherry and sun-dried tomato, Caesar dressing and parmigiano" },
-        { "name": "Basilico", "price": "12,50 €", "es": "Queso semicurado, tomate seco, rúcula, almendras y jamón serrano", "en": "Semi-cured cheese, sun-dried tomato, rocket, almonds and serrano ham" },
-        { "name": "Burrata", "price": "14 €", "es": "Queso burrata, tostas de pan con tomate, cebolla morada, pesto, vinagre de Módena y rúcula", "en": "Burrata with tomato toasts, red onion, pesto, Modena vinegar and rocket" }
+        {
+          "name": "Del César",
+          "price": "12,50 €",
+          "es": "Pollo rebozado, tomate cherry, tomate seco, salsa césar y parmigiano",
+          "en": "Crispy chicken, cherry and sun-dried tomato, Caesar dressing and parmigiano"
+        },
+        {
+          "name": "Basilico",
+          "price": "12,50 €",
+          "es": "Queso semicurado, tomate seco, rúcula, almendras y jamón serrano",
+          "en": "Semi-cured cheese, sun-dried tomato, rocket, almonds and serrano ham"
+        },
+        {
+          "name": "Burrata",
+          "price": "14 €",
+          "es": "Queso burrata, tostas de pan con tomate, cebolla morada, pesto, vinagre de Módena y rúcula",
+          "en": "Burrata with tomato toasts, red onion, pesto, Modena vinegar and rocket"
+        }
       ]
     },
     {
@@ -73,14 +203,40 @@
       "en": "Our potatoes",
       "note_es": "Llegan en sartén. Para compartir.",
       "note_en": "Served in the pan. Made for sharing.",
-      "img": "patatas-sarten",
-      "img_alt_es": "Patatas llama a los bomberos servidas en sartén con pimientos del padrón",
-      "img_alt_en": "'Call the firefighters' potatoes served in the pan with padrón peppers",
+      "img": "patatas-gratinadas",
+      "img_alt_es": "Patatas gratinadas con queso servidas en sartén",
+      "img_alt_en": "Potatoes baked with cheese, served in the pan",
       "items": [
-        { "name": "Patatas llama a los bomberos", "price": "15 €", "es": "Con salsa casera picante, pimientos del padrón y alioli", "en": "'Call the firefighters' potatoes: homemade hot sauce, padrón peppers and aioli", "tags": ["fav"] },
-        { "name": "Patatas a los 4 quesos", "price": "16 €", "es": "Queso scamorza, queso azul, nata vegetal, parmigiano y mozzarella de búfala", "en": "Scamorza, blue cheese, plant-based cream, parmigiano and buffalo mozzarella" },
-        { "name": "Huevos rotos", "price": "15,50 €", "es": "Jamón serrano, huevos fritos, patatas caseras y pimientos del padrón", "en": "Homemade chips with fried eggs, serrano ham and padrón peppers" },
-        { "name": "Que morro", "price": "16 €", "es": "Patata casera, morro de cerdo, huevos fritos, pimientos del padrón y salsa gaucha", "en": "Homemade potatoes with pork snout, fried eggs, padrón peppers and gaucho sauce", "tags": ["fav"] }
+        {
+          "name": "Patatas llama a los bomberos",
+          "price": "15 €",
+          "es": "Con salsa casera picante, pimientos del padrón y alioli",
+          "en": "'Call the firefighters' potatoes: homemade hot sauce, padrón peppers and aioli",
+          "tags": [
+            "fav"
+          ]
+        },
+        {
+          "name": "Patatas a los 4 quesos",
+          "price": "16 €",
+          "es": "Queso scamorza, queso azul, nata vegetal, parmigiano y mozzarella de búfala",
+          "en": "Scamorza, blue cheese, plant-based cream, parmigiano and buffalo mozzarella"
+        },
+        {
+          "name": "Huevos rotos",
+          "price": "15,50 €",
+          "es": "Jamón serrano, huevos fritos, patatas caseras y pimientos del padrón",
+          "en": "Homemade chips with fried eggs, serrano ham and padrón peppers"
+        },
+        {
+          "name": "Que morro",
+          "price": "16 €",
+          "es": "Patata casera, morro de cerdo, huevos fritos, pimientos del padrón y salsa gaucha",
+          "en": "Homemade potatoes with pork snout, fried eggs, padrón peppers and gaucho sauce",
+          "tags": [
+            "fav"
+          ]
+        }
       ]
     },
     {
@@ -89,35 +245,163 @@
       "en": "Roman pizzas",
       "note_es": "Masa fina",
       "note_en": "Thin crust",
-      "img": "pizza-rucula",
-      "img_alt_es": "Pizza con rúcula, cebolla morada y tomate",
-      "img_alt_en": "Pizza topped with rocket, red onion and tomato",
+      "img": "carta-romanas",
+      "img_alt_es": "Calzone y pizza de masa fina en una mesa de Basilico",
+      "img_alt_en": "Calzone and thin-crust pizza on a Basilico table",
       "items": [
-        { "name": "Arrabbiata", "price": "13,50 €", "es": "Pimiento italiano asado, tomate cherry, cebolla asada, pepperoni, chile y aceite picante", "en": "Roasted Italian pepper, cherry tomato, roasted onion, pepperoni, chilli and hot oil" },
-        { "name": "Basilico", "price": "14 €", "es": "Jamón serrano, rúcula y mermelada de higos", "en": "Serrano ham, rocket and fig jam" },
-        { "name": "Barbacoa", "price": "13 €", "es": "Carne picada y salsa barbacoa", "en": "Minced beef and barbecue sauce" },
-        { "name": "Calzone", "price": "13,50 €", "es": "Tomate cherry, huevo, champiñones, york y tomate seco", "en": "Folded pizza with cherry tomato, egg, mushrooms, cooked ham and sun-dried tomato" },
-        { "name": "Carbonara", "price": "14 €", "es": "Setas, nata, huevo, pimienta, parmigiano y bacón", "en": "Mushrooms, cream, egg, pepper, parmigiano and bacon" },
-        { "name": "Contorná", "price": "14 €", "es": "Sobrasada, cebolla, dátiles y scamorza", "en": "Sobrasada, onion, dates and scamorza", "tags": ["iv"] },
-        { "name": "4 quesos", "price": "14,50 €", "es": "Scamorza, queso azul, mozzarella y parmigiano", "en": "Scamorza, blue cheese, mozzarella and parmigiano" },
-        { "name": "Frutos del mar", "price": "15,50 €", "es": "Calamar, mejillones, atún y gambas", "en": "Squid, mussels, tuna and prawns" },
-        { "name": "Fugazzetta", "price": "15 €", "es": "Masa doble rellena de mozzarella y una capa de cebolla con ajos", "en": "Double crust stuffed with mozzarella, topped with onion and garlic" },
-        { "name": "Hawaiana", "price": "13 €", "es": "Jamón york y piña", "en": "Cooked ham and pineapple" },
-        { "name": "Horta", "price": "14 €", "es": "Calabacín, berenjena, tomate fresco, pimiento verde y rojo y pesto", "en": "Courgette, aubergine, fresh tomato, green and red pepper and pesto" },
-        { "name": "Margherita", "price": "11,50 €", "es": "Mozzarella y albahaca", "en": "Mozzarella and basil" },
-        { "name": "Pepperoni", "price": "13 €", "es": "Pepperoni y aceite picante", "en": "Pepperoni and chilli oil" },
-        { "name": "Pollo", "price": "14,50 €", "es": "Pollo, cebolla, tomate cherry, pimientos y salsa barbacoa", "en": "Chicken, onion, cherry tomato, peppers and barbecue sauce" },
-        { "name": "Prosciutto", "price": "12,50 €", "es": "Mozzarella y jamón york cocido", "en": "Mozzarella and cooked ham" },
-        { "name": "Pulpo", "price": "17 €", "es": "Pulpo, crema de patatas, sal y pimentón de la Vera", "en": "Octopus, potato cream, salt and smoked La Vera paprika" },
-        { "name": "Roma", "price": "13 €", "es": "Jamón york cocido y champiñones", "en": "Cooked ham and mushrooms" },
-        { "name": "Rúcula", "price": "14 €", "es": "Rúcula y jamón serrano", "en": "Rocket and serrano ham" },
-        { "name": "Salmón", "price": "15 €", "es": "Salmón, aceitunas, cebolla, atún y anchoas", "en": "Salmon, olives, onion, tuna and anchovies" },
-        { "name": "Sicilia", "price": "14 €", "es": "Alcaparras, aceitunas y anchoas", "en": "Capers, olives and anchovies" },
-        { "name": "Sorrento", "price": "14 €", "es": "Jamón york cocido, champiñones, cebolla y salami", "en": "Cooked ham, mushrooms, onion and salami" },
-        { "name": "Toscana", "price": "14 €", "es": "Huevo, bacón y espinacas", "en": "Egg, bacon and spinach" },
-        { "name": "Valdostana", "price": "14 €", "es": "Bacón, huevo y jamón york cocido", "en": "Bacon, egg and cooked ham" },
-        { "name": "Pizza kebab picante", "price": "15 €", "es": "Pollo estilo kebab, guacamole, cebolla morada, rúcula, tomate fresco, salsa de yogur, salsa picante y cheddar", "en": "Kebab-style chicken, guacamole, red onion, rocket, fresh tomato, yoghurt sauce, hot sauce and cheddar" },
-        { "name": "Pizza kebab de ternera", "price": "15 €", "es": "Ternera estilo kebab, guacamole, bacón, cebolla morada, tomate fresco, rúcula, queso gouda y salsa de yogur", "en": "Kebab-style beef, guacamole, bacon, red onion, fresh tomato, rocket, gouda and yoghurt sauce" }
+        {
+          "name": "Arrabbiata",
+          "price": "13,50 €",
+          "es": "Pimiento italiano asado, tomate cherry, cebolla asada, pepperoni, chile y aceite picante",
+          "en": "Roasted Italian pepper, cherry tomato, roasted onion, pepperoni, chilli and hot oil"
+        },
+        {
+          "name": "Basilico",
+          "price": "14 €",
+          "es": "Jamón serrano, rúcula y mermelada de higos",
+          "en": "Serrano ham, rocket and fig jam"
+        },
+        {
+          "name": "Barbacoa",
+          "price": "13 €",
+          "es": "Carne picada y salsa barbacoa",
+          "en": "Minced beef and barbecue sauce"
+        },
+        {
+          "name": "Calzone",
+          "price": "13,50 €",
+          "es": "Tomate cherry, huevo, champiñones, york y tomate seco",
+          "en": "Folded pizza with cherry tomato, egg, mushrooms, cooked ham and sun-dried tomato"
+        },
+        {
+          "name": "Carbonara",
+          "price": "14 €",
+          "es": "Setas, nata, huevo, pimienta, parmigiano y bacón",
+          "en": "Mushrooms, cream, egg, pepper, parmigiano and bacon"
+        },
+        {
+          "name": "Contorná",
+          "price": "14 €",
+          "es": "Sobrasada, cebolla, dátiles y scamorza",
+          "en": "Sobrasada, onion, dates and scamorza",
+          "tags": [
+            "iv"
+          ]
+        },
+        {
+          "name": "4 quesos",
+          "price": "14,50 €",
+          "es": "Scamorza, queso azul, mozzarella y parmigiano",
+          "en": "Scamorza, blue cheese, mozzarella and parmigiano"
+        },
+        {
+          "name": "Frutos del mar",
+          "price": "15,50 €",
+          "es": "Calamar, mejillones, atún y gambas",
+          "en": "Squid, mussels, tuna and prawns"
+        },
+        {
+          "name": "Fugazzetta",
+          "price": "15 €",
+          "es": "Masa doble rellena de mozzarella y una capa de cebolla con ajos",
+          "en": "Double crust stuffed with mozzarella, topped with onion and garlic"
+        },
+        {
+          "name": "Hawaiana",
+          "price": "13 €",
+          "es": "Jamón york y piña",
+          "en": "Cooked ham and pineapple"
+        },
+        {
+          "name": "Horta",
+          "price": "14 €",
+          "es": "Calabacín, berenjena, tomate fresco, pimiento verde y rojo y pesto",
+          "en": "Courgette, aubergine, fresh tomato, green and red pepper and pesto"
+        },
+        {
+          "name": "Margherita",
+          "price": "11,50 €",
+          "es": "Mozzarella y albahaca",
+          "en": "Mozzarella and basil"
+        },
+        {
+          "name": "Pepperoni",
+          "price": "13 €",
+          "es": "Pepperoni y aceite picante",
+          "en": "Pepperoni and chilli oil"
+        },
+        {
+          "name": "Pollo",
+          "price": "14,50 €",
+          "es": "Pollo, cebolla, tomate cherry, pimientos y salsa barbacoa",
+          "en": "Chicken, onion, cherry tomato, peppers and barbecue sauce"
+        },
+        {
+          "name": "Prosciutto",
+          "price": "12,50 €",
+          "es": "Mozzarella y jamón york cocido",
+          "en": "Mozzarella and cooked ham"
+        },
+        {
+          "name": "Pulpo",
+          "price": "17 €",
+          "es": "Pulpo, crema de patatas, sal y pimentón de la Vera",
+          "en": "Octopus, potato cream, salt and smoked La Vera paprika"
+        },
+        {
+          "name": "Roma",
+          "price": "13 €",
+          "es": "Jamón york cocido y champiñones",
+          "en": "Cooked ham and mushrooms"
+        },
+        {
+          "name": "Rúcula",
+          "price": "14 €",
+          "es": "Rúcula y jamón serrano",
+          "en": "Rocket and serrano ham"
+        },
+        {
+          "name": "Salmón",
+          "price": "15 €",
+          "es": "Salmón, aceitunas, cebolla, atún y anchoas",
+          "en": "Salmon, olives, onion, tuna and anchovies"
+        },
+        {
+          "name": "Sicilia",
+          "price": "14 €",
+          "es": "Alcaparras, aceitunas y anchoas",
+          "en": "Capers, olives and anchovies"
+        },
+        {
+          "name": "Sorrento",
+          "price": "14 €",
+          "es": "Jamón york cocido, champiñones, cebolla y salami",
+          "en": "Cooked ham, mushrooms, onion and salami"
+        },
+        {
+          "name": "Toscana",
+          "price": "14 €",
+          "es": "Huevo, bacón y espinacas",
+          "en": "Egg, bacon and spinach"
+        },
+        {
+          "name": "Valdostana",
+          "price": "14 €",
+          "es": "Bacón, huevo y jamón york cocido",
+          "en": "Bacon, egg and cooked ham"
+        },
+        {
+          "name": "Pizza kebab picante",
+          "price": "15 €",
+          "es": "Pollo estilo kebab, guacamole, cebolla morada, rúcula, tomate fresco, salsa de yogur, salsa picante y cheddar",
+          "en": "Kebab-style chicken, guacamole, red onion, rocket, fresh tomato, yoghurt sauce, hot sauce and cheddar"
+        },
+        {
+          "name": "Pizza kebab de ternera",
+          "price": "15 €",
+          "es": "Ternera estilo kebab, guacamole, bacón, cebolla morada, tomate fresco, rúcula, queso gouda y salsa de yogur",
+          "en": "Kebab-style beef, guacamole, bacon, red onion, fresh tomato, rocket, gouda and yoghurt sauce"
+        }
       ]
     },
     {
@@ -126,14 +410,40 @@
       "en": "Neapolitan pizzas",
       "note_es": "Borde alto, al horno",
       "note_en": "Puffy crust, oven-baked",
-      "img": "napolitana",
-      "img_alt_es": "Pizza napolitana con borde alto y tomate cherry",
-      "img_alt_en": "Neapolitan pizza with a puffy crust and cherry tomato",
+      "img": "carta-napolitanas",
+      "img_alt_es": "Pizza de borde alto y tostado con rúcula, tomate y cebolla morada",
+      "img_alt_en": "Puffy, charred-crust pizza with rocket, tomato and red onion",
       "items": [
-        { "name": "Carciofi", "price": "17 €", "es": "Alcachofas, huevo cocido, jamón serrano y pimientos del padrón", "en": "Artichokes, boiled egg, serrano ham and padrón peppers", "tags": ["iv"] },
-        { "name": "Guanciale", "price": "18 €", "es": "Gorgonzola, cebolla morada, tomate fresco, guanciale, scamorza, rúcula y mozzarella", "en": "Gorgonzola, red onion, fresh tomato, guanciale, scamorza, rocket and mozzarella", "tags": ["fav"] },
-        { "name": "Bianca", "price": "17 €", "es": "Mozzarella, tomate seco, vitello tonnato, salsa Basilico, alcaparras y rúcula", "en": "White pizza: mozzarella, sun-dried tomato, vitello tonnato, Basilico sauce, capers and rocket" },
-        { "name": "Campera", "price": "18 €", "es": "Lomo de chuletón gallego, mozzarella, salsa Basilico, tomate, bacón, huevos, alcachofas y pimientos del padrón", "en": "Galician rib-eye, mozzarella, Basilico sauce, tomato, bacon, eggs, artichokes and padrón peppers" }
+        {
+          "name": "Carciofi",
+          "price": "17 €",
+          "es": "Alcachofas, huevo cocido, jamón serrano y pimientos del padrón",
+          "en": "Artichokes, boiled egg, serrano ham and padrón peppers",
+          "tags": [
+            "iv"
+          ]
+        },
+        {
+          "name": "Guanciale",
+          "price": "18 €",
+          "es": "Gorgonzola, cebolla morada, tomate fresco, guanciale, scamorza, rúcula y mozzarella",
+          "en": "Gorgonzola, red onion, fresh tomato, guanciale, scamorza, rocket and mozzarella",
+          "tags": [
+            "fav"
+          ]
+        },
+        {
+          "name": "Bianca",
+          "price": "17 €",
+          "es": "Mozzarella, tomate seco, vitello tonnato, salsa Basilico, alcaparras y rúcula",
+          "en": "White pizza: mozzarella, sun-dried tomato, vitello tonnato, Basilico sauce, capers and rocket"
+        },
+        {
+          "name": "Campera",
+          "price": "18 €",
+          "es": "Lomo de chuletón gallego, mozzarella, salsa Basilico, tomate, bacón, huevos, alcachofas y pimientos del padrón",
+          "en": "Galician rib-eye, mozzarella, Basilico sauce, tomato, bacon, eggs, artichokes and padrón peppers"
+        }
       ]
     },
     {
@@ -142,15 +452,37 @@
       "en": "Italo-Valencian pinsas",
       "note_es": "Masa alargada y aireada",
       "note_en": "Long, airy dough",
-      "img": "pinsa-padron",
-      "img_alt_es": "Pinsa de chuletón con pimientos del padrón sobre mantel de cuadros",
-      "img_alt_en": "Rib-eye pinsa with padrón peppers on a checked tablecloth",
-      "tags": ["iv"],
+      "img": "carta-pinsas",
+      "img_alt_es": "Pinsa alargada con mozzarella y tomate seco sobre tabla de madera",
+      "img_alt_en": "Long pinsa with mozzarella and sun-dried tomato on a wooden board",
+      "tags": [
+        "iv"
+      ],
       "items": [
-        { "name": "Pinsa de chuletón", "price": "19 €", "es": "Chuletón gallego, patata laminada, tomate, mozzarella, pimientos del padrón y chimichurri", "en": "Galician rib-eye, sliced potato, tomato, mozzarella, padrón peppers and chimichurri" },
-        { "name": "Pinsa de búfala", "price": "18 €", "es": "Mozzarella de búfala, tomate seco, scamorza y dátiles", "en": "Buffalo mozzarella, sun-dried tomato, scamorza and dates" },
-        { "name": "Pinsa de pato", "price": "17 €", "es": "Alcachofas, cebolla, pimiento verde y rojo, magret de pato y setas", "en": "Artichokes, onion, green and red pepper, duck breast and mushrooms" },
-        { "name": "Pinsa de costilla de cerdo", "price": "16,50 €", "es": "Cerdo a baja temperatura en su salsa, cebolla, pimientos del padrón, cilantro y lima", "en": "Slow-cooked pork rib in its sauce, onion, padrón peppers, coriander and lime" }
+        {
+          "name": "Pinsa de chuletón",
+          "price": "19 €",
+          "es": "Chuletón gallego, patata laminada, tomate, mozzarella, pimientos del padrón y chimichurri",
+          "en": "Galician rib-eye, sliced potato, tomato, mozzarella, padrón peppers and chimichurri"
+        },
+        {
+          "name": "Pinsa de búfala",
+          "price": "18 €",
+          "es": "Mozzarella de búfala, tomate seco, scamorza y dátiles",
+          "en": "Buffalo mozzarella, sun-dried tomato, scamorza and dates"
+        },
+        {
+          "name": "Pinsa de pato",
+          "price": "17 €",
+          "es": "Alcachofas, cebolla, pimiento verde y rojo, magret de pato y setas",
+          "en": "Artichokes, onion, green and red pepper, duck breast and mushrooms"
+        },
+        {
+          "name": "Pinsa de costilla de cerdo",
+          "price": "16,50 €",
+          "es": "Cerdo a baja temperatura en su salsa, cebolla, pimientos del padrón, cilantro y lima",
+          "en": "Slow-cooked pork rib in its sauce, onion, padrón peppers, coriander and lime"
+        }
       ]
     },
     {
@@ -162,29 +494,74 @@
       "img_alt_en": "Rigatoni with pesto and basil leaves on a blue ceramic plate",
       "subsections": [
         {
-          "es": "Canelones", "en": "Cannelloni",
+          "es": "Canelones",
+          "en": "Cannelloni",
           "items": [
-            { "name": "Canelones de espinacas", "price": "16 €", "es": "Rellenos de espinacas, queso azul, mozzarella y nata vegetal", "en": "Filled with spinach, blue cheese, mozzarella and plant-based cream" },
-            { "name": "Canelones de salmón", "price": "16 €", "es": "Rellenos de salmón, burrata, tomate seco y bechamel", "en": "Filled with salmon, burrata, sun-dried tomato and béchamel" },
-            { "name": "Canelones de pollo", "price": "16 €", "es": "Rellenos de pollo, serrano, tomate, queso scamorza y bechamel", "en": "Filled with chicken, serrano ham, tomato, scamorza and béchamel" }
+            {
+              "name": "Canelones de espinacas",
+              "price": "16 €",
+              "es": "Rellenos de espinacas, queso azul, mozzarella y nata vegetal",
+              "en": "Filled with spinach, blue cheese, mozzarella and plant-based cream"
+            },
+            {
+              "name": "Canelones de salmón",
+              "price": "16 €",
+              "es": "Rellenos de salmón, burrata, tomate seco y bechamel",
+              "en": "Filled with salmon, burrata, sun-dried tomato and béchamel"
+            },
+            {
+              "name": "Canelones de pollo",
+              "price": "16 €",
+              "es": "Rellenos de pollo, serrano, tomate, queso scamorza y bechamel",
+              "en": "Filled with chicken, serrano ham, tomato, scamorza and béchamel"
+            }
           ]
         },
         {
-          "es": "Lasaña", "en": "Lasagne",
+          "es": "Lasaña",
+          "en": "Lasagne",
           "items": [
-            { "name": "Lasagna", "price": "16 €", "es": "Rellena de boloñesa, bechamel, mozzarella y tomate", "en": "Layered with bolognese, béchamel, mozzarella and tomato" }
+            {
+              "name": "Lasagna",
+              "price": "16 €",
+              "es": "Rellena de boloñesa, bechamel, mozzarella y tomate",
+              "en": "Layered with bolognese, béchamel, mozzarella and tomato"
+            }
           ]
         },
         {
-          "es": "Pasta rellena", "en": "Filled pasta",
+          "es": "Pasta rellena",
+          "en": "Filled pasta",
           "items": [
-            { "name": "Ravioli al tartufo", "price": "", "es": "", "en": "Truffle ravioli" },
-            { "name": "Ravioloni ricotta y espinacas", "price": "", "es": "", "en": "Ricotta and spinach ravioloni" },
-            { "name": "Ravioli de setas", "price": "", "es": "", "en": "Mushroom ravioli" }
+            {
+              "name": "Ravioli al tartufo",
+              "price": "",
+              "es": "",
+              "en": "Truffle ravioli"
+            },
+            {
+              "name": "Ravioloni ricotta y espinacas",
+              "price": "",
+              "es": "",
+              "en": "Ricotta and spinach ravioloni"
+            },
+            {
+              "name": "Ravioli de setas",
+              "price": "",
+              "es": "",
+              "en": "Mushroom ravioli"
+            }
           ]
         }
       ],
-      "pastaTypes": ["Spaghetti", "Tagliatelle", "Casarecce", "Maccheroni", "Zitone", "Fusilotti"]
+      "pastaTypes": [
+        "Spaghetti",
+        "Tagliatelle",
+        "Casarecce",
+        "Maccheroni",
+        "Zitone",
+        "Fusilotti"
+      ]
     },
     {
       "id": "salsas",
@@ -196,15 +573,60 @@
       "img_alt_es": "Tagliatelle frutos del mar con almejas servidos en cazuela de hierro",
       "img_alt_en": "Seafood tagliatelle with clams served in a cast-iron pot",
       "items": [
-        { "name": "Arrabbiata", "price": "15,50 €", "es": "Salsa picante casera, tomate cherry y pimientos del padrón", "en": "Homemade spicy sauce, cherry tomato and padrón peppers" },
-        { "name": "Bolognesa", "price": "16 €", "es": "Carne picada de ternera, cebolla, pimientos, zanahoria y tomate", "en": "Minced beef, onion, peppers, carrot and tomato" },
-        { "name": "Trufa", "price": "17,50 €", "es": "Trufa negra y blanca con aceite de albahaca", "en": "Black and white truffle with basil oil" },
-        { "name": "Carbonara bacón", "price": "15 €", "es": "Guanciale o bacón con parmigiano, yema de huevo y pimienta", "en": "Guanciale or bacon with parmigiano, egg yolk and pepper" },
-        { "name": "Carbonara guanciale", "price": "16 €", "es": "Guanciale o bacón con parmigiano, yema de huevo y pimienta", "en": "Guanciale or bacon with parmigiano, egg yolk and pepper" },
-        { "name": "Salmón", "price": "17,50 €", "es": "Salmón, atún, olivas, ajos, tomate cherry y bechamel", "en": "Salmon, tuna, olives, garlic, cherry tomato and béchamel" },
-        { "name": "Queso azul", "price": "16,50 €", "es": "Pollo, nata vegetal, nueces, queso azul y pimienta", "en": "Chicken, plant-based cream, walnuts, blue cheese and pepper" },
-        { "name": "Pesto verde", "price": "15,50 €", "es": "Aceite de oliva, albahaca y parmigiano", "en": "Olive oil, basil and parmigiano" },
-        { "name": "Frutos del mar", "price": "18 €", "es": "Gambas, mejillones, almejas, caldo de pescado y cebolla", "en": "Prawns, mussels, clams, fish stock and onion" }
+        {
+          "name": "Arrabbiata",
+          "price": "15,50 €",
+          "es": "Salsa picante casera, tomate cherry y pimientos del padrón",
+          "en": "Homemade spicy sauce, cherry tomato and padrón peppers"
+        },
+        {
+          "name": "Bolognesa",
+          "price": "16 €",
+          "es": "Carne picada de ternera, cebolla, pimientos, zanahoria y tomate",
+          "en": "Minced beef, onion, peppers, carrot and tomato"
+        },
+        {
+          "name": "Trufa",
+          "price": "17,50 €",
+          "es": "Trufa negra y blanca con aceite de albahaca",
+          "en": "Black and white truffle with basil oil"
+        },
+        {
+          "name": "Carbonara bacón",
+          "price": "15 €",
+          "es": "Guanciale o bacón con parmigiano, yema de huevo y pimienta",
+          "en": "Guanciale or bacon with parmigiano, egg yolk and pepper"
+        },
+        {
+          "name": "Carbonara guanciale",
+          "price": "16 €",
+          "es": "Guanciale o bacón con parmigiano, yema de huevo y pimienta",
+          "en": "Guanciale or bacon with parmigiano, egg yolk and pepper"
+        },
+        {
+          "name": "Salmón",
+          "price": "17,50 €",
+          "es": "Salmón, atún, olivas, ajos, tomate cherry y bechamel",
+          "en": "Salmon, tuna, olives, garlic, cherry tomato and béchamel"
+        },
+        {
+          "name": "Queso azul",
+          "price": "16,50 €",
+          "es": "Pollo, nata vegetal, nueces, queso azul y pimienta",
+          "en": "Chicken, plant-based cream, walnuts, blue cheese and pepper"
+        },
+        {
+          "name": "Pesto verde",
+          "price": "15,50 €",
+          "es": "Aceite de oliva, albahaca y parmigiano",
+          "en": "Olive oil, basil and parmigiano"
+        },
+        {
+          "name": "Frutos del mar",
+          "price": "18 €",
+          "es": "Gambas, mejillones, almejas, caldo de pescado y cebolla",
+          "en": "Prawns, mussels, clams, fish stock and onion"
+        }
       ]
     },
     {
@@ -212,10 +634,30 @@
       "es": "Risottos italianos",
       "en": "Italian risottos",
       "items": [
-        { "name": "Del mar", "price": "18 €", "es": "Gambas, ajos, mejillones, cebolla, cava y parmigiano", "en": "Prawns, garlic, mussels, onion, cava and parmigiano" },
-        { "name": "Del corral", "price": "17 €", "es": "Pollo, cebolla, pimientos, cava, parmigiano, tomate cherry y guisantes", "en": "Chicken, onion, peppers, cava, parmigiano, cherry tomato and peas" },
-        { "name": "Boletus", "price": "16 €", "es": "Setas, parmigiano, cebolla, nata vegetal y cava", "en": "Porcini, parmigiano, onion, plant-based cream and cava" },
-        { "name": "Trufa", "price": "17,50 €", "es": "Trufa blanca y negra, alcachofas, cebolla, tomate seco y burrata", "en": "White and black truffle, artichokes, onion, sun-dried tomato and burrata" }
+        {
+          "name": "Del mar",
+          "price": "18 €",
+          "es": "Gambas, ajos, mejillones, cebolla, cava y parmigiano",
+          "en": "Prawns, garlic, mussels, onion, cava and parmigiano"
+        },
+        {
+          "name": "Del corral",
+          "price": "17 €",
+          "es": "Pollo, cebolla, pimientos, cava, parmigiano, tomate cherry y guisantes",
+          "en": "Chicken, onion, peppers, cava, parmigiano, cherry tomato and peas"
+        },
+        {
+          "name": "Boletus",
+          "price": "16 €",
+          "es": "Setas, parmigiano, cebolla, nata vegetal y cava",
+          "en": "Porcini, parmigiano, onion, plant-based cream and cava"
+        },
+        {
+          "name": "Trufa",
+          "price": "17,50 €",
+          "es": "Trufa blanca y negra, alcachofas, cebolla, tomate seco y burrata",
+          "en": "White and black truffle, artichokes, onion, sun-dried tomato and burrata"
+        }
       ]
     },
     {
@@ -226,9 +668,24 @@
       "img_alt_es": "Chuletón a la brasa en cazuela de barro con verduras",
       "img_alt_en": "Grilled rib-eye in a clay dish with vegetables",
       "items": [
-        { "name": "Solomillo", "price": "25 €", "es": "Solomillo de ternera, patatas fritas y pimientos del padrón", "en": "Beef tenderloin with chips and padrón peppers" },
-        { "name": "Magret de pato", "price": "22 €", "es": "Con salsa de miel casera, puré trufado y sus verduritas", "en": "Duck breast with homemade honey sauce, truffled mash and vegetables" },
-        { "name": "Costillas de cerdo", "price": "20 €", "es": "A baja temperatura, con patatas fritas, salsa barbacoa al whisky y miel", "en": "Slow-cooked pork ribs with chips and whisky-honey barbecue sauce" }
+        {
+          "name": "Solomillo",
+          "price": "25 €",
+          "es": "Solomillo de ternera, patatas fritas y pimientos del padrón",
+          "en": "Beef tenderloin with chips and padrón peppers"
+        },
+        {
+          "name": "Magret de pato",
+          "price": "22 €",
+          "es": "Con salsa de miel casera, puré trufado y sus verduritas",
+          "en": "Duck breast with homemade honey sauce, truffled mash and vegetables"
+        },
+        {
+          "name": "Costillas de cerdo",
+          "price": "20 €",
+          "es": "A baja temperatura, con patatas fritas, salsa barbacoa al whisky y miel",
+          "en": "Slow-cooked pork ribs with chips and whisky-honey barbecue sauce"
+        }
       ]
     },
     {
@@ -236,8 +693,18 @@
       "es": "Del mar",
       "en": "From the sea",
       "items": [
-        { "name": "Bacalao", "price": "18 €", "es": "Acompañado de puré de patatas, verduras y alioli tostado", "en": "Cod with mashed potato, vegetables and toasted aioli" },
-        { "name": "Salmón", "price": "17 €", "es": "Acompañado de puré, verduras y salsa tártara", "en": "Salmon with mash, vegetables and tartare sauce" }
+        {
+          "name": "Bacalao",
+          "price": "18 €",
+          "es": "Acompañado de puré de patatas, verduras y alioli tostado",
+          "en": "Cod with mashed potato, vegetables and toasted aioli"
+        },
+        {
+          "name": "Salmón",
+          "price": "17 €",
+          "es": "Acompañado de puré, verduras y salsa tártara",
+          "en": "Salmon with mash, vegetables and tartare sauce"
+        }
       ]
     },
     {
@@ -248,10 +715,36 @@
       "img_alt_es": "Tarta de queso casera con mermelada y helado en plato de cerámica",
       "img_alt_en": "Homemade cheesecake with jam and ice cream on a ceramic plate",
       "items": [
-        { "name": "Torrija", "price": "7 €", "es": "Con helado de vainilla, crema inglesa, canela y crujiente de almendras", "en": "Spanish-style French toast with vanilla ice cream, custard, cinnamon and almond crunch", "tags": ["fav"] },
-        { "name": "Un mal día en la playa", "price": "7,50 €", "es": "Helado de vainilla, chocolate, fresa, dulce de leche, chocolate caliente y arena de galleta maría", "en": "'A bad day at the beach': vanilla, chocolate and strawberry ice cream, dulce de leche, hot chocolate and biscuit 'sand'" },
-        { "name": "Brownie de chocolate", "price": "6,50 €", "es": "Con chocolate caliente y helado de fresa", "en": "With hot chocolate sauce and strawberry ice cream" },
-        { "name": "Tarta de queso (sin gluten)", "price": "6 €", "es": "Con mermelada de higos, helado de pistacho y dulce de leche", "en": "Gluten-free cheesecake with fig jam, pistachio ice cream and dulce de leche", "tags": ["fav"] }
+        {
+          "name": "Torrija",
+          "price": "7 €",
+          "es": "Con helado de vainilla, crema inglesa, canela y crujiente de almendras",
+          "en": "Spanish-style French toast with vanilla ice cream, custard, cinnamon and almond crunch",
+          "tags": [
+            "fav"
+          ]
+        },
+        {
+          "name": "Un mal día en la playa",
+          "price": "7,50 €",
+          "es": "Helado de vainilla, chocolate, fresa, dulce de leche, chocolate caliente y arena de galleta maría",
+          "en": "'A bad day at the beach': vanilla, chocolate and strawberry ice cream, dulce de leche, hot chocolate and biscuit 'sand'"
+        },
+        {
+          "name": "Brownie de chocolate",
+          "price": "6,50 €",
+          "es": "Con chocolate caliente y helado de fresa",
+          "en": "With hot chocolate sauce and strawberry ice cream"
+        },
+        {
+          "name": "Tarta de queso (sin gluten)",
+          "price": "6 €",
+          "es": "Con mermelada de higos, helado de pistacho y dulce de leche",
+          "en": "Gluten-free cheesecake with fig jam, pistachio ice cream and dulce de leche",
+          "tags": [
+            "fav"
+          ]
+        }
       ]
     }
   ]

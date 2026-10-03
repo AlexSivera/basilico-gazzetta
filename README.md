@@ -31,6 +31,13 @@ Etiquetas disponibles por plato:
 - `"tags": ["fav"]`: Favorito
 - `"tags": ["iv"]`: Italovalenciano
 
+## Basilico&Spritz de vacaciones
+
+El aviso de cierre lo controla la constante `CLOSED` de `assets/js/main.js` (`spritz: { since: '2026-09-20' }`). Al reabrir:
+
+1. Ponla a `{}`.
+2. Revisa los textos de la portada de `spritz.html` y la banda Spritz de `index.html`.
+
 ## Horarios
 
 Están en `assets/js/main.js` (constante `HOURS`, para el estado en vivo y la reserva) y en las tablas `.hours` y el JSON-LD de cada HTML.

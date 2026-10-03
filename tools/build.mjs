@@ -44,7 +44,9 @@ function dish(d) {
         </li>`;
 }
 
-function section(s, i, total) {
+const countOf = (s) => (s.items ? s.items.length : s.subsections.reduce((m, x) => m + x.items.length, 0));
+
+function section(s) {
   const list = (items) => `<ul class="dishes" role="list">\n        ${items.map(dish).join('\n        ')}\n      </ul>`;
   let body = '';
   if (s.subsections) {
@@ -65,13 +67,12 @@ function section(s, i, total) {
   }
   const fig = s.img ? `
       <figure class="carta-sec__fig">
-        ${img(s.img, { alt: s.img_alt_es, altEn: s.img_alt_en, sizes: '(min-width: 1000px) 360px, 92vw' })}
+        ${img(s.img, { alt: s.img_alt_es, altEn: s.img_alt_en, sizes: '(min-width: 1000px) 30vw, 92vw' })}
       </figure>` : '';
   const note = s.note_es ? `<p class="carta-sec__note" data-en="${esc(s.note_en)}">${esc(s.note_es)}</p>` : '';
   return `
     <section class="carta-sec${s.img ? ' has-fig' : ''}" id="c-${s.id}" data-cat="${s.id}" aria-labelledby="h-${s.id}">
       <header class="carta-sec__head">
-        <span class="carta-sec__num">${String(i + 1).padStart(2, '0')}<span>/${total}</span></span>
         <h3 class="carta-sec__title" id="h-${s.id}" data-en="${esc(s.en)}">${esc(s.es)}</h3>
         ${tagHtml(s.tags)}${note}
       </header>${fig}
@@ -80,17 +81,18 @@ function section(s, i, total) {
     </section>`;
 }
 
+// Índice de secciones: enlaces normales (sin JS saltan a la sección);
+// con JS funcionan como pestañas y muestran una sección cada vez.
 function carta(data) {
-  const total = data.sections.length;
-  const chips = data.sections.map((s) =>
-    `<li><a class="chip" href="#c-${s.id}" data-cat="${s.id}" data-en="${esc(s.en)}">${esc(s.es)}</a></li>`).join('\n          ');
+  const idx = data.sections.map((s) =>
+    `<li><a class="cidx" href="#c-${s.id}" data-cat="${s.id}"><span data-en="${esc(s.en)}">${esc(s.es)}</span><b>${countOf(s)}</b></a></li>`).join('\n          ');
   return `
-      <nav class="carta-nav" aria-label="Categorías de la carta" data-en-aria-label="Menu categories">
-        <ul class="carta-nav__list" role="list">
-          ${chips}
+      <nav class="carta-index" aria-label="Secciones de la carta" data-en-aria-label="Menu sections">
+        <ul class="carta-index__list" role="list">
+          ${idx}
         </ul>
       </nav>
-      <div class="carta-secs">${data.sections.map((s, i) => section(s, i, total)).join('\n')}
+      <div class="carta-secs">${data.sections.map((s) => section(s)).join('\n')}
       </div>`;
 }
 
@@ -109,7 +111,7 @@ function menus(list) {
           <ul role="list">${c.items.map((it) => `<li data-en="${esc(it.en)}">${esc(it.es)}</li>`).join('')}</ul>
         </div>`).join('')}
         <p class="menu-card__incl"><strong data-en="Includes">Incluye</strong> <span data-en="${esc(m.includes_en)}">${esc(m.includes_es)}</span></p>
-        <p class="menu-card__src"><span data-edition></span> · <span data-en="${esc('Source: ' + m.source.replace(/^Instagram/, 'Instagram'))}">${esc('Fuente: ' + m.source)}</span></p>
+        <p class="menu-card__src" data-edition></p>
       </article>`).join('\n');
 }
 
@@ -128,7 +130,7 @@ function inject(file, blocks) {
 const tav = read('data/carta-tavernetta.json');
 const spz = read('data/carta-spritz.json');
 const men = read('data/menus.json');
-const count = (d) => d.sections.reduce((n, s) => n + (s.items ? s.items.length : s.subsections.reduce((m, x) => m + x.items.length, 0)), 0);
+const count = (d) => d.sections.reduce((n, s) => n + countOf(s), 0);
 
 inject('index.html', { 'carta-tavernetta': carta(tav), menus: menus(men.tavernetta) });
 inject('spritz.html', { 'carta-spritz': carta(spz) });

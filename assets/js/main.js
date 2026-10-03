@@ -38,6 +38,9 @@
     tavernetta: { phone: '34652823117', tel: '652 823 117', es: 'Basilico Tavernetta (Beniarbeig)', en: 'Basilico Tavernetta (Beniarbeig)' },
     spritz: { phone: '34653888937', tel: '653 888 937', es: 'Basilico&Spritz (piscina de Benimeli)', en: 'Basilico&Spritz (Benimeli pool)' },
   };
+  // Cierres temporales. Spritz anunció vacaciones el 20/09/2026 (Instagram):
+  // «Volvemos muy pronto con carta renovada y con terraza cubierta». Poner a null al reabrir.
+  const CLOSED = { spritz: { since: '2026-09-20' } };
   const MENU_DAYS = { semana: [3, 4, 5], finde: [6, 0] };
   const venue = d.body.dataset.venue || 'tavernetta';
 
@@ -56,13 +59,6 @@
   const isoToDate = (iso) => { const [y, m, dd] = iso.split('-').map(Number); return new Date(Date.UTC(y, m - 1, dd, 12)); };
   const dowOf = (iso) => isoToDate(iso).getUTCDay();
   const addDays = (iso, n) => { const x = isoToDate(iso); x.setUTCDate(x.getUTCDate() + n); return x.toISOString().slice(0, 10); };
-  function isoWeek(iso) {
-    const x = isoToDate(iso);
-    const day = (x.getUTCDay() + 6) % 7;
-    x.setUTCDate(x.getUTCDate() - day + 3);
-    const first = new Date(Date.UTC(x.getUTCFullYear(), 0, 4));
-    return 1 + Math.round(((x - first) / 864e5 - 3 + ((first.getUTCDay() + 6) % 7)) / 7);
-  }
 
   /* ---------- Idioma ---------- */
   let lang = 'es';
@@ -73,13 +69,12 @@
       closedNow: 'Cerrado ahora', openToday: (x) => `abrimos hoy a las ${x}`,
       openTomorrow: (x) => `abrimos mañana a las ${x}`, openOn: (dname, x) => `abrimos el ${dname} a las ${x}`,
       closed: 'Cerrado', todayH: 'Hoy', and: 'y', todayClosed: (dname) => `Hoy ${dname} descansamos.`,
-      tickerOpen: (r) => `Hoy abrimos ${r}`, tickerClosed: (n) => `Hoy descansamos · ${n}`,
       range: (a, b) => `de ${a} a ${b}`, today: 'Hoy',
+      vacation: 'Cerrado por vacaciones', vacationTail: 'volvemos muy pronto',
+      vacationRes: 'Basilico&Spritz está de vacaciones: volverá muy pronto. Mientras, la Tavernetta de Beniarbeig sigue abierta.',
+      selloToday: 'Hoy a mediodía', selloWeek: 'Menú de mediodía', selloDrink: 'con bebida', selloPast: 'Menú de mediodía', selloPastS: 'cada semana',
       menuToday: 'Hoy a mediodía', menuWeek: 'Esta semana', menuPast: 'Edición anterior', menuNext: 'Próxima edición',
       editionRange: (a, b) => `Del ${a} al ${b}`,
-      frontToday: (name) => `Hoy a mediodía: ${name}`,
-      frontPast: 'Nueva edición de los menús, en camino',
-      frontPastTxt: 'Se publica cada semana en Instagram. Llámanos y te lo cantamos.',
       count: (n, q) => `${n} ${n === 1 ? 'plato' : 'platos'} con «${q}»`,
       none: 'Ese día no abrimos. Abrimos de miércoles a domingo.',
       noneSpritz: 'Ese día no abrimos. Horario de invierno: viernes noche, sábado y domingo a mediodía.',
@@ -91,20 +86,18 @@
       waHello: 'Hola Basilico, quería pedir mesa:', waVenue: 'Local', waDay: 'Día', waTime: 'Hora',
       waPeople: 'Personas', waZone: 'Preferencia', waDog: 'Venimos con perro', waName: 'Nombre', waNotes: 'Nota', waThanks: '¡Gracias!',
       zone: { terraza: 'terraza', interior: 'dentro' },
-      edition: 'Edición nº',
     },
     en: {
       openNow: 'Open now', until: (x) => `until ${x}`, closingAt: (x) => `closing at ${x}`,
       closedNow: 'Closed now', openToday: (x) => `we open today at ${x}`,
       openTomorrow: (x) => `we open tomorrow at ${x}`, openOn: (dname, x) => `we open on ${dname} at ${x}`,
       closed: 'Closed', todayH: 'Today', and: 'and', todayClosed: (dname) => `We're closed today (${dname}).`,
-      tickerOpen: (r) => `Today we're open ${r}`, tickerClosed: (n) => `Closed today · ${n}`,
       range: (a, b) => `${a}–${b}`, today: 'Today',
+      vacation: 'Closed for holidays', vacationTail: 'back very soon',
+      vacationRes: 'Basilico&Spritz is on holiday and will be back very soon. Meanwhile, the Tavernetta in Beniarbeig is open.',
+      selloToday: 'Today at lunch', selloWeek: 'Lunch set menu', selloDrink: 'with a drink', selloPast: 'Lunch set menu', selloPastS: 'every week',
       menuToday: 'Today at lunch', menuWeek: 'This week', menuPast: 'Previous edition', menuNext: 'Next edition',
       editionRange: (a, b) => `${a} – ${b}`,
-      frontToday: (name) => `Today at lunch: ${name}`,
-      frontPast: 'A new edition of the set menus is on its way',
-      frontPastTxt: 'Published every week on Instagram. Call us and we will tell you.',
       count: (n, q) => `${n} ${n === 1 ? 'dish' : 'dishes'} match «${q}»`,
       none: "We're closed that day. We open Wednesday to Sunday.",
       noneSpritz: "We're closed that day. Winter hours: Friday evening, Saturday and Sunday lunch.",
@@ -116,7 +109,6 @@
       waHello: 'Hello Basilico, I would like to book a table:', waVenue: 'Venue', waDay: 'Day', waTime: 'Time',
       waPeople: 'People', waZone: 'Preference', waDog: "We're bringing a dog", waName: 'Name', waNotes: 'Note', waThanks: 'Thank you!',
       zone: { terraza: 'terrace', interior: 'inside' },
-      edition: 'Edition no.',
     },
   };
   const s = () => S[lang];
@@ -148,6 +140,7 @@
 
   /* ---------- Estado en vivo ---------- */
   function statusOf(v, now = madridNow()) {
+    if (CLOSED[v] && now.iso >= CLOSED[v].since) return { open: false, vacation: true };
     const H = HOURS[v];
     const today = H[now.dow] || [];
     for (const [a, b] of today) if (now.min >= a && now.min < b) return { open: true, until: b, soon: b - now.min <= 45 };
@@ -161,6 +154,7 @@
   }
   function statusText(st) {
     const x = s();
+    if (st.vacation) return { head: x.vacation, tail: x.vacationTail };
     if (st.open) return { head: x.openNow, tail: st.soon ? x.closingAt(hhmm(st.until)) : x.until(hhmm(st.until)) };
     let tail = '';
     if (st.inDays === 0) tail = x.openToday(hhmm(st.at));
@@ -181,7 +175,6 @@
     // Fecha de portada y número de edición (semana ISO)
     const dl = $('[data-dateline]');
     if (dl) dl.textContent = cap(new Intl.DateTimeFormat(L(), { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Madrid' }).format(new Date()));
-    $$('[data-weekno]').forEach((el) => { el.textContent = isoWeek(now.iso); });
 
     const short = $('[data-status-short]');
     if (short) {
@@ -190,15 +183,14 @@
     }
     const long = $('[data-status-long]');
     if (long) {
-      long.innerHTML = `<span class="dot" aria-hidden="true"></span>${txt.head}<br><small>${cap(txt.tail || '')}</small>`;
+      const todayR = st.vacation ? [] : (HOURS[venue][now.dow] || []);
+      const hoursTxt = todayR.length ? ` · ${s().todayH}: ${rangesText(todayR)}` : '';
+      long.innerHTML = `<span class="dot" aria-hidden="true"></span><b>${txt.head}</b>${txt.tail ? ' · ' + txt.tail : ''}${hoursTxt}`;
       long.classList.toggle('is-closed', !st.open);
     }
     const todayRanges = HOURS[venue][now.dow] || [];
     const th = $('[data-today-hours]');
     if (th) th.textContent = todayRanges.length ? `${s().todayH}: ${rangesText(todayRanges)}.` : s().todayClosed(dayName(now.dow));
-    const tk = $('[data-status-ticker]');
-    if (tk) tk.textContent = todayRanges.length ? s().tickerOpen(rangesText(todayRanges)) : s().tickerClosed(cap(txt.tail || ''));
-    syncTickerClones();
 
     // Tabla de horario: día de hoy
     $$('[data-hours] tr').forEach((tr) => {
@@ -235,43 +227,18 @@
       if (ed) ed.textContent = s().editionRange(fmtShort(from), fmtShort(to));
     });
 
-    const fm = $('[data-front-menu]');
-    if (!fm) return;
-    const title = $('[data-front-menu-title]');
-    const price = $('[data-front-menu-price]');
-    const text = $('[data-front-menu-text]');
+    const sello = $('[data-sello]');
+    if (!sello) return;
+    const k = $('[data-sello-k]', sello); const pr = $('[data-sello-p]', sello); const sub = $('[data-sello-s]', sello);
+    [k, pr, sub].forEach((el) => { delete el.dataset.en; delete el.dataset.es; });
     const pick = todayCard || nextCard;
-    const strip = (el) => { if (el) { delete el.dataset.en; delete el.dataset.es; } };
-    [title, price, text].forEach(strip);
     if (pick) {
-      const name = pick.querySelector('.menu-card__title').textContent.trim();
-      const when = pick.querySelector('.menu-card__when').textContent.trim();
-      title.textContent = todayCard ? s().frontToday(name) : name;
-      price.textContent = pick.querySelector('.menu-card__price span').textContent.trim();
-      const firstCourse = [...pick.querySelectorAll('.menu-card__course')].map((cc) => cc.querySelector('li')?.textContent.trim()).filter(Boolean).slice(0, 2).join(' · ');
-      text.textContent = `${when}. ${firstCourse}…`;
+      k.textContent = todayCard ? s().selloToday : s().selloWeek;
+      pr.textContent = pick.querySelector('.menu-card__price span').textContent.trim();
+      sub.textContent = s().selloDrink;
     } else {
-      title.textContent = s().frontPast;
-      price.textContent = '16–20 €';
-      text.textContent = s().frontPastTxt;
+      k.textContent = s().selloPast; pr.textContent = '16 €'; sub.textContent = s().selloPastS;
     }
-  }
-
-  /* ---------- Ticker ---------- */
-  let tickerReady = false;
-  function syncTickerClones() {
-    const track = $('[data-ticker]');
-    if (!track) return;
-    $$('[data-clone]', track).forEach((n) => n.remove());
-    const originals = [...track.children];
-    originals.forEach((n) => {
-      const c = n.cloneNode(true);
-      c.setAttribute('aria-hidden', 'true');
-      c.dataset.clone = '';
-      c.querySelectorAll('[data-status-ticker]').forEach((x) => x.removeAttribute('data-status-ticker'));
-      track.appendChild(c);
-    });
-    if (!tickerReady) { track.closest('.ticker').classList.add('is-ready'); tickerReady = true; }
   }
 
   /* ---------- Carta: buscador + navegación ---------- */
@@ -301,8 +268,8 @@
         });
         $$('.carta-sub', sec).forEach((sub) => { sub.hidden = words.length > 0 && !$$('.dish:not(.is-hidden)', sub).length; });
         sec.classList.toggle('is-hidden', words.length > 0 && n === 0);
-        const chip = $(`.chip[data-cat="${sec.dataset.cat}"]`, carta);
-        if (chip) chip.classList.toggle('is-empty', words.length > 0 && n === 0);
+        const link = $(`.cidx[data-cat="${sec.dataset.cat}"]`, carta);
+        if (link) link.classList.toggle('is-empty', words.length > 0 && n === 0);
         total += n;
       });
       if (countEl) countEl.textContent = words.length ? s().count(total, raw.trim()) : '';
@@ -312,20 +279,49 @@
     search.addEventListener('input', () => { clearTimeout(tmr); tmr = setTimeout(runSearch, 110); });
     search.addEventListener('keydown', (e) => { if (e.key === 'Escape') { search.value = ''; runSearch(); } });
 
-    // Chip activo según la sección visible
-    const chips = $$('.chip', carta);
-    const list = $('.carta-nav__list', carta);
-    const setActive = (id) => {
-      chips.forEach((c) => c.classList.toggle('is-active', c.dataset.cat === id));
-      const a = chips.find((c) => c.dataset.cat === id);
-      if (a && list) list.scrollTo({ left: a.offsetLeft - 12, behavior: reduceMotion ? 'auto' : 'smooth' });
+    // Pestañas: una sección cada vez. Los enlaces siguen siendo #anclas (sin JS saltan a la sección).
+    const links = $$('.cidx', carta);
+    const list = $('.carta-index__list', carta);
+    const ids = secs.map((x) => x.dataset.cat);
+    carta.classList.add('is-tabbed');
+    const show = (id, { scroll = false } = {}) => {
+      if (!ids.includes(id)) return;
+      if (search.value) { search.value = ''; runSearch(); }
+      secs.forEach((x) => x.classList.toggle('is-current', x.dataset.cat === id));
+      links.forEach((l) => {
+        const on = l.dataset.cat === id;
+        l.classList.toggle('is-active', on);
+        if (on) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current');
+      });
+      const a = links.find((l) => l.dataset.cat === id);
+      if (a && list && list.scrollWidth > list.clientWidth) list.scrollTo({ left: a.offsetLeft - 16, behavior: reduceMotion ? 'auto' : 'smooth' });
+      if (scroll) {
+        const top = carta.getBoundingClientRect().top + scrollY - parseFloat(getComputedStyle(root).getPropertyValue('--topbar-h')) - 8;
+        if (Math.abs(scrollY - top) > 4 && (scrollY > top || carta.getBoundingClientRect().top > innerHeight * 0.4)) {
+          scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+        }
+      }
     };
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((en) => { if (en.isIntersecting) setActive(en.target.dataset.cat); });
-      }, { rootMargin: '-40% 0px -55% 0px' });
-      secs.forEach((sec) => io.observe(sec));
-    }
+    links.forEach((l) => l.addEventListener('click', (e) => {
+      e.preventDefault();
+      show(l.dataset.cat, { scroll: true });
+      history.replaceState(null, '', `#c-${l.dataset.cat}`);
+    }));
+    // Enlaces externos a una sección (tríptico de masas, URL con #c-…)
+    $$('[data-goto-cat]').forEach((g) => g.addEventListener('click', (e) => {
+      e.preventDefault();
+      show(g.dataset.gotoCat);
+      const top = carta.getBoundingClientRect().top + scrollY - 70;
+      scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+      history.replaceState(null, '', `#c-${g.dataset.gotoCat}`);
+    }));
+    const fromHash = () => {
+      const m = location.hash.match(/^#c-(.+)$/);
+      if (m && ids.includes(m[1])) { show(m[1]); requestAnimationFrame(() => carta.scrollIntoView()); return true; }
+      return false;
+    };
+    if (!fromHash()) show(ids[0]);
+    addEventListener('hashchange', fromHash);
   }
 
   /* ---------- Reserva por WhatsApp ---------- */
@@ -344,10 +340,13 @@
     const err = $('[data-r-err]', dlg);
     const call = $('[data-r-call]', dlg);
     const phoneTxt = $('[data-r-phone]', dlg);
+    const submit = $('[type="submit"]', dlg);
     let people = 2;
 
+    const isClosedOn = (v, iso) => !!(CLOSED[v] && iso >= CLOSED[v].since);
     const slotsFor = (v, iso) => {
       const now = madridNow();
+      if (isClosedOn(v, iso)) return [];
       const ranges = HOURS[v][dowOf(iso)] || [];
       const out = [];
       ranges.forEach(([a, b]) => {
@@ -358,6 +357,7 @@
     };
     const firstOpenDay = (v) => {
       const now = madridNow();
+      if (isClosedOn(v, now.iso)) return now.iso;
       for (let i = 0; i < 14; i++) {
         const iso = addDays(now.iso, i);
         if (slotsFor(v, iso).length) return iso;
@@ -369,6 +369,12 @@
       const iso = fDate.value;
       fTime.innerHTML = '';
       dayMsg.textContent = '';
+      submit.disabled = false;
+      if (isClosedOn(v, iso || madridNow().iso)) {
+        fTime.disabled = true; submit.disabled = true;
+        dayMsg.textContent = s().vacationRes;
+        return;
+      }
       if (!iso) return;
       const slots = slotsFor(v, iso);
       const ranges = HOURS[v][dowOf(iso)] || [];
@@ -499,13 +505,11 @@
     }, { rootMargin: '-45% 0px -50% 0px' });
     $$('main > section[id]').forEach((sec) => io.observe(sec));
 
-    if (!reduceMotion) {
-      const targets = $$('.sec__intro, .menu-card, .letter, .ad, .ph, .suple__in, .visit > *, .casa__text');
-      targets.forEach((el) => el.classList.add('reveal'));
-      const rv = new IntersectionObserver((entries) => {
-        entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('is-in'); rv.unobserve(en.target); } });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      targets.forEach((el) => rv.observe(el));
+    // La marca pequeña de la barra aparece cuando la cabecera grande sale de pantalla
+    const mh = $('[data-masthead]');
+    if (mh) {
+      d.body.classList.add('has-masthead');
+      new IntersectionObserver(([en]) => d.body.classList.toggle('is-past-masthead', !en.isIntersecting), { rootMargin: `-${parseInt(getComputedStyle(root).getPropertyValue('--topbar-h'), 10) || 60}px 0px 0px 0px` }).observe($('.masthead__logo', mh));
     }
     // Sucesos: la foto pasa de "impresa" (B/N) a color cuando la miras
     const live = new IntersectionObserver((entries) => {
